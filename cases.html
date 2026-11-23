@@ -358,9 +358,9 @@ function renderNode(id) {
   selectedNode = id;
   const grid = document.querySelector('[data-node-grid]');
   if (grid) grid.innerHTML = CASE_NODES.map(n => `<div class="cnode ${n.id === id ? 'on' : ''}" data-node="${n.id}"><div class="nt">${n.name}</div><div class="nm"><span class="cdot ${n.type}"></span>覆盖 ${n.cap} · 人工 ${n.human}</div><div class="cost">${n.cost}</div></div>`).join('');
-  const cfg = CFG[id] || CFG.fit;
+  const node = CASE_NODES.find(n => n.id === id) || CASE_NODES.find(n => n.id === 'fit');
   const box = document.querySelector('[data-cfg]');
-  if (box) box.innerHTML = `<div class="title">${cfg.title}</div><div class="role">${cfg.role}</div><div class="ckv"><div class="k">输入 / 输出契约</div><div class="v">${cfg.io}</div></div><div class="ckv"><div class="k">拒答边界</div><div class="v">${cfg.stop}</div></div><div class="ckv"><div class="k">阈值</div><div class="v">${cfg.th}</div></div><div class="ckv"><div class="k">失败降级路径</div><div class="v">${cfg.fb}</div></div><div class="cdiv"></div><div class="ckv"><div class="k">已知失效模式</div><div class="v" style="color:#b4690e">${cfg.fail}</div></div>`;
+  if (box) box.innerHTML = `<div class="title">${node.name}</div><div class="role">${node.role}</div><div class="ckv"><div class="k">输入 / 输出契约</div><div class="v">${node.io}</div></div><div class="ckv"><div class="k">拒答边界</div><div class="v">${node.stop}</div></div><div class="ckv"><div class="k">阈值</div><div class="v">${node.th}</div></div><div class="ckv"><div class="k">失败降级路径</div><div class="v">${node.fb}</div></div><div class="cdiv"></div><div class="ckv"><div class="k">已知失效模式</div><div class="v" style="color:#b4690e">${node.fail}</div></div>`;
 }
 const nodeGrid = document.querySelector('[data-node-grid]');
 if (nodeGrid) nodeGrid.addEventListener('click', e => {
