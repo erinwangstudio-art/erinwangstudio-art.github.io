@@ -4,339 +4,368 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>王雅一 · 项目案例 · AI 产品经理</title>
-<link rel="stylesheet" href="assets/site.css">
+<style>
+body{margin:0;font-family:'PingFang SC','Noto Sans SC',system-ui,sans-serif;background:#fbfbfd}
+a{color:inherit;text-decoration:none}
+*{box-sizing:border-box}
+.hp{background:#fbfbfd;color:#111114;font-family:'PingFang SC','Noto Sans SC',system-ui,sans-serif;font-size:16px;line-height:1.65}
+.hpwrap{max-width:1180px;margin:0 auto;padding:0 40px}
+.hpnav{position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 40px;border-bottom:1px solid #e6e6ec;background:rgba(255,255,255,.94);backdrop-filter:blur(10px)}
+.hlogo{display:flex;align-items:baseline;gap:10px;font-weight:800;font-size:17px}
+.hlogo i{width:26px;height:26px;border-radius:7px;background:#4338ca;color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:13px}
+.hnav{display:flex;gap:24px;font-size:14px;color:#6b6b76}
+.hnav .on{color:#4338ca;border-bottom:2px solid #4338ca;font-weight:600}
+.hpill{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;background:#111114;color:#fff;padding:9px 16px;border-radius:999px}
+.ph{border:1px dashed #b7b7c6;background:linear-gradient(135deg,#f8f8fb,#f1f1f6);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#6b6b76;text-align:center;padding:18px;gap:6px}
+.ph b{font-size:12px;color:#4338ca;letter-spacing:1px}
+.ph span{font-size:13px;color:#6b6b76;line-height:1.5}
+.ph small{font-size:11px;color:#9a9aa5}
+.ph-cover{aspect-ratio:16/9;width:100%;margin-bottom:16px}
+.ph-wide{aspect-ratio:21/9;width:100%;margin:14px 0 18px}
+.mast{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding:30px 0 22px;border-bottom:2px solid #111114;flex-wrap:wrap}
+.mast .name{font-size:44px;font-weight:800;letter-spacing:1px;line-height:1}
+.mast .role{font-size:12.5px;letter-spacing:3px;color:#4338ca;margin-top:10px;font-weight:600}
+.mast .contact{text-align:right;font-size:13px;color:#6b6b76;line-height:1.8}
+.case-grid{display:grid;grid-template-columns:280px minmax(0,1fr);gap:60px;padding:42px 0 30px}
+.casebar{position:sticky;top:76px;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid #e6e6ec;padding:16px 0 12px;flex-wrap:wrap;background:rgba(251,251,253,.96);backdrop-filter:blur(10px)}
+.casebar .label{font-size:12px;color:#6b6b76;letter-spacing:1px}
+.casebar .ctabs-mini{display:flex;gap:8px;flex-wrap:wrap}
+.casebar .ctab-mini{border:1px solid #e6e6ec;background:#fff;color:#6b6b76;border-radius:999px;padding:6px 12px;font-size:12px;cursor:pointer}
+.casebar .ctab-mini.on{background:#111114;color:#fff;border-color:#111114}
+.nextcase{display:inline-flex;align-items:center;gap:6px;margin-top:16px;border:0;background:transparent;color:#4338ca;font-size:12.5px;font-weight:600;cursor:pointer;padding:0}
+.ai-note{margin-top:12px;border-left:2px solid #4338ca;padding-left:12px;font-size:12.5px;color:#6b6b76;line-height:1.6}
+.ai-note b{color:#111114}
+.idx h2{font-size:15px;letter-spacing:2px;color:#6b6b76;margin:0 0 16px;font-weight:600}
+.idx ul{list-style:none;margin:0;padding:0}
+.idx li{border-top:1px solid #e6e6ec;padding:16px 4px;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:baseline;transition:.2s}
+.idx li:last-child{border-bottom:1px solid #e6e6ec}
+.idx li:hover,.idx li.on{background:#f4f4f8}
+.idx li.on .t{color:#4338ca}
+.idx .n{font-size:13px;color:#6b6b76}
+.idx .t{font-size:20px;font-weight:700;line-height:1.25}
+.idx .s{grid-column:2;font-size:12.5px;color:#6b6b76;margin-top:2px}
+.stage{min-height:520px}
+.image-stack{position:relative;margin:0 0 16px;padding-bottom:56px}
+.image-stack .stack-main{width:100%;height:360px;object-fit:cover;border-radius:12px;display:block}
+.image-stack .stack-over{position:absolute;right:0;bottom:0;width:46%;height:190px;object-fit:cover;border:4px solid #fff;border-radius:12px;box-shadow:0 12px 28px rgba(17,17,20,.18)}
+@media(max-width:980px){.image-stack{padding-bottom:0}.image-stack .stack-over{position:static;width:100%;height:220px;margin-top:10px;border-width:0}}
+.panel .ptop{display:flex;align-items:baseline;justify-content:space-between;gap:20px;border-bottom:1px solid #111114;padding-bottom:10px;flex-wrap:wrap}
+.panel h3{font-size:30px;margin:0;font-weight:800}
+.panel .meta{font-size:12.5px;color:#6b6b76;letter-spacing:1px;white-space:nowrap}
+.panel .desc{font-size:15.5px;color:#2b2b31;margin:16px 0 0;max-width:640px}
+.metrics{display:flex;gap:26px;flex-wrap:wrap;margin:22px 0 6px}
+.metrics div{border-left:2px solid #4338ca;padding-left:11px}
+.metrics b{display:block;font-size:20px;font-weight:800;line-height:1.2}
+.metrics span{font-size:11.5px;color:#6b6b76}
+.demo{border:1px solid #e6e6ec;background:#f4f4f8;border-radius:12px;padding:18px;margin-top:22px}
+.demo h4{margin:0 0 12px;font-size:11.5px;letter-spacing:2px;color:#6b6b76;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:7px;border:1px solid #111114;background:transparent;color:#111114;padding:8px 14px;border-radius:999px;font-size:12.5px;cursor:pointer;min-height:36px}
+.steps{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.step{font-size:12px;border:1px solid #e6e6ec;border-radius:999px;padding:6px 10px;color:#6b6b76;background:#fff;transition:.3s}
+.step.on{background:#4338ca;color:#fff;border-color:#4338ca}
+.plugin-flow span{font-size:12px;color:#6b6b76;border:1px solid #e6e6ec;border-radius:8px;padding:6px 10px;background:#fff}
+.plugin-flow i{font-style:normal;color:#4338ca;margin:0 3px}
+.editor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.ecard{border:1px solid #e6e6ec;border-radius:12px;padding:16px;background:#fff}
+.ecard h4{margin:0 0 8px;font-size:15px}
+.ecard p{margin:0;font-size:13px;color:#6b6b76}
+.sessions{display:flex;flex-direction:column;gap:8px}
+.sess{display:flex;align-items:center;gap:10px;border:1px solid #e6e6ec;border-radius:8px;padding:9px 12px;font-size:13px;cursor:pointer;background:#fff;text-align:left;color:#111114;min-height:40px}
+.lamp{width:10px;height:10px;border-radius:50%;background:#22c55e;flex:none}
+.sess[data-s="warn"] .lamp{background:#f59e0b}
+.sess[data-s="block"] .lamp{background:#ef4444}
+.sess small{margin-left:auto;color:#6b6b76;font-size:11px}
+.case{border-top:1px solid #e6e6ec;padding:56px 0 10px}
+.case .chead{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:18px}
+.case .chead h2{margin:0}
+.case h2{font-size:30px;margin:0 0 8px;font-weight:800}
+.story{display:grid;gap:9px;margin:0 0 22px;padding:18px 20px;border:1px solid #e6e6ec;border-radius:12px;background:#fff}
+.story-row{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;font-size:13.5px;line-height:1.7;color:#2b2b31}
+.story-row b{font-size:12px;letter-spacing:.6px;color:#6b6b76;font-weight:600}
+.story.icons{gap:12px;padding:20px 22px}
+.story.icons .story-row{grid-template-columns:24px 96px minmax(0,1fr);gap:12px;align-items:start}
+.story.icons .story-ic{width:18px;height:18px;color:#4338ca;margin-top:2px;flex:none}
+.story .todo{color:#4338ca;background:#eef0ff;border-bottom:1px dashed #4338ca;padding:0 3px}
+.project-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.mini-project{border:1px solid #e6e6ec;border-radius:12px;padding:16px;background:#fff}
+.mini-project .cover-img{height:180px;object-fit:cover;border-radius:10px}
+.mini-project h4{margin:14px 0 6px;font-size:18px}
+.mini-project p{margin:0 0 12px;font-size:13px;color:#6b6b76;line-height:1.6}
+.project-block{border-top:1px solid #e6e6ec;padding-top:28px;margin-top:28px}
+.project-block .subhead{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.project-block .subhead h3{margin:0;font-size:22px}
+@media(max-width:980px){.story-row{grid-template-columns:1fr;gap:2px}.story.icons .story-row{grid-template-columns:24px 1fr;gap:8px}.story.icons .story-row b,.story.icons .story-row > span:last-child{grid-column:2}.project-pair{grid-template-columns:1fr}.project-block .subhead{align-items:flex-start;flex-direction:column;gap:8px}}
+.case .clead{color:#2b2b31;font-size:13.5px;margin:0 0 14px;max-width:860px}
+.cnote{font-size:12px;color:#6b6b76;border:1px solid #e6e6ec;border-radius:999px;padding:4px 10px;background:#fff}
+.ctabs{display:flex;gap:4px;border-bottom:1px solid #e6e6ec;margin-bottom:18px;flex-wrap:wrap}
+.ctab{border:0;background:transparent;font:inherit;font-size:13px;color:#6b6b76;padding:9px 14px;border-radius:8px 8px 0 0;border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer}
+.ctab.on{color:#4338ca;font-weight:600;border-bottom-color:#4338ca;background:#fff}
+.cbuilder{display:grid;grid-template-columns:190px minmax(0,1fr) 270px;gap:14px}
+.cside,.ccfg{background:#fff;border:1px solid #e6e6ec;border-radius:12px;padding:12px}
+.cside h3{font-size:11px;color:#6b6b76;letter-spacing:.6px;margin:0 0 10px;font-weight:600}
+.ctpl{border:1px solid #e6e6ec;border-radius:8px;padding:9px 10px;margin-bottom:8px;background:#fff}
+.ctpl.on{border-color:#4338ca;background:#eef0ff}
+.ctpl b{display:block;font-size:12.5px;font-weight:600;margin-bottom:2px}
+.ctpl span{font-size:11px;color:#6b6b76}
+.ccanvas{position:relative;background:linear-gradient(0deg,#f0f0f6 1px,transparent 1px) 0 0/16px 16px,linear-gradient(90deg,#f0f0f6 1px,transparent 1px) 0 0/16px 16px,#fcfcfe;border:1px solid #e6e6ec;border-radius:12px;min-height:360px;padding:16px}
+.cgrid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 18px}
+.cnode{position:relative;z-index:2;background:#fff;border:1px solid #d9d9e6;border-radius:9px;padding:9px 10px;cursor:pointer}
+.cnode.on{border-color:#4338ca;box-shadow:0 0 0 2px rgba(67,56,202,.16)}
+.cnode .nt{font-size:12px;font-weight:600;margin-bottom:5px}
+.cnode .nm{display:flex;align-items:center;gap:6px;font-size:10.5px;color:#6b6b76}
+.cdot{width:6px;height:6px;border-radius:50%;flex:none;background:#2f9e6e}
+.cdot.human{background:#e0a030}
+.cnode .cost{position:absolute;right:9px;bottom:8px;font-size:10px;color:#6b6b76}
+.ccfg .title{font-size:13px;font-weight:600;margin:0 0 2px}
+.ccfg .role{font-size:11px;color:#6b6b76;margin-bottom:12px}
+.ckv{margin-bottom:10px}.ckv .k{font-size:10.5px;color:#6b6b76;letter-spacing:.4px;margin-bottom:2px}.ckv .v{font-size:12px;color:#111114}
+.cdiv{height:1px;background:#e6e6ec;margin:10px 0}
+.ctablewrap{background:#fff;border:1px solid #e6e6ec;border-radius:12px;overflow:auto}
+table.ccap{width:100%;border-collapse:collapse;font-size:12px;min-width:760px}
+table.ccap th{text-align:left;font-weight:600;color:#6b6b76;font-size:10.5px;letter-spacing:.5px;padding:9px 10px;border-bottom:1px solid #e6e6ec;white-space:nowrap;background:#fbfbfe}
+table.ccap th.num{text-align:right}
+table.ccap td{padding:9px 10px;border-bottom:1px solid #f1f1f7;vertical-align:middle}
+table.ccap td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.ccap td.muted{color:#6b6b76;font-size:11px}
+.cbar{height:5px;border-radius:3px;background:#ededf5;position:relative;min-width:54px}
+.cbar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:#4338ca}
+.cbar i.hot{background:#c0563f}
+.ceval{display:grid;grid-template-columns:1.25fr 1fr;gap:14px}
+.ccard{background:#fff;border:1px solid #e6e6ec;border-radius:12px;padding:14px}
+.ckpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.ckpi .box{border:1px solid #e6e6ec;border-radius:8px;padding:10px}
+.ckpi .l{font-size:10.5px;color:#6b6b76;margin-bottom:4px}
+.ckpi .n{font-size:19px;font-weight:600;letter-spacing:.3px}
+.ckpi .box.bad .n{color:#c0563f}.ckpi .box.good .n{color:#1b7a54}
+.ckpi .u{font-size:10.5px;color:#6b6b76}
+.crowbar{display:grid;grid-template-columns:78px 1fr 48px;align-items:center;gap:9px;margin-bottom:9px;font-size:11.5px}
+.crowbar .tr{height:14px;background:#f0f0f6;border-radius:4px;position:relative;overflow:hidden}
+.crowbar .tr i{position:absolute;left:0;top:0;bottom:0;background:#c7c7e0;border-radius:4px}
+.crowbar .tr i.hot{background:#d98e6e}
+.crowbar .vv{text-align:right;color:#6b6b76}
+.cfootnote{font-size:11px;color:#6b6b76;margin-top:10px}
+.ch3{font-size:12px;color:#6b6b76;letter-spacing:.5px;margin:0 0 12px}
+.foot{border-top:1px solid #e6e6ec;margin-top:30px;padding:22px 0 50px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#6b6b76}
+@media(max-width:980px){.case-grid{grid-template-columns:1fr}.cbuilder,.ceval,.editor-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-<nav class="site-nav">
-  <a class="nav-brand" href="index.html"><i>王</i>Erin Wang <span>AI PM</span></a>
-  <div class="nav-links">
-    <a href="index.html">首页</a>
-    <a class="active" href="cases.html">项目案例</a>
-    <a href="experience.html">个人经历</a>
-  </div>
-  <a class="nav-cta" href="index.html#contact">联系我 ↗</a>
-</nav>
-
-<main class="wrap">
-  <div class="casebar">
-    <span class="label">3 个案例 · 点击切换</span>
-    <div class="ctabs-mini">
-      <button class="ctab-mini on" data-p="p-workflow">01 AI 工作流引擎</button>
-      <button class="ctab-mini" data-p="p-editor">02 独立站可视化编辑器</button>
-      <button class="ctab-mini" data-p="p-practice">03 个人AI实践</button>
-    </div>
+<div class="hp" id="top">
+  <div class="hpnav">
+    <div class="hlogo"><i>王</i>Erin Wang<span style="font-weight:500;color:#6b6b76;font-size:13px">AI PM</span></div>
+    <nav class="hnav">
+      <a href="index.html">首页</a>
+      <a class="on" href="cases.html">项目案例</a>
+      <a href="experience.html">个人经历</a>
+    </nav>
+    <a class="hpill" href="index.html#contact">联系我 ↗</a>
   </div>
 
-  <div class="case-grid">
-    <div class="idx">
-      <h2>INDEX · 案例</h2>
-      <ul id="idx">
-        <li class="on" data-p="p-workflow"><span class="n">01</span><span class="t">AI 工作流引擎</span><span class="s">含采集插件 · 可玩示例</span></li>
-        <li data-p="p-editor"><span class="n">02</span><span class="t">独立站可视化编辑器</span><span class="s">主题系统 · 多市场装修</span></li>
-        <li data-p="p-practice"><span class="n">03</span><span class="t">个人AI实践</span><span class="s">AI 画布 · DSH 插件</span></li>
-      </ul>
+  <div class="hpwrap">
+    <div class="casebar">
+      <span class="label">3 个案例 · 点击切换</span>
+      <div class="ctabs-mini">
+        <button class="ctab-mini on" data-p="workflow">01 AI 工作流引擎</button>
+        <button class="ctab-mini" data-p="editor">02 独立站可视化编辑器</button>
+        <button class="ctab-mini" data-p="practice">03 个人AI实践</button>
+      </div>
     </div>
-    <div class="stage">
-      <section class="panel on" id="p-workflow">
-        <div class="image-stack"><img class="stack-main" src="assets/workflow-sample.png" alt="AI 工作流示例"><img class="stack-over" src="assets/workflow-detail.png" alt="工作流链路补充图"></div>
-        <div class="ptop"><h3>AI 工作流引擎与编排平台</h3><span class="meta">2025 – 至今</span></div>
-        <p class="desc" style="max-width:none;width:100%">面向跨境电商运营的 AI 自动化平台，把采集、清洗、图像处理、风险识别、上架串成可编排的生产链路。浏览器采集插件是这条链路的数据入口，不单独成案。</p>
-        <div class="metrics">
-          <div><b>500→4000</b><span>日均开款量（8×）</span></div>
-          <div><b>10→40</b><span>人均管理店铺（4×）</span></div>
-          <div><b>80%+</b><span>核心流程覆盖</span></div>
+
+    <div class="case-grid">
+      <div class="idx">
+        <h2>INDEX · 案例</h2>
+        <ul>
+          <li class="on" data-p="workflow"><span class="n">01</span><span class="t">AI 工作流引擎</span><span class="s">含采集插件 · 可玩示例</span></li>
+          <li data-p="editor"><span class="n">02</span><span class="t">独立站可视化编辑器</span><span class="s">主题系统 · 多市场装修</span></li>
+          <li data-p="practice"><span class="n">03</span><span class="t">个人AI实践</span><span class="s">AI 画布 · DSH 插件</span></li>
+        </ul>
+      </div>
+      <div class="stage">
+        <div data-case-panel="workflow" style="display:block">
+        <div class="panel">
+            
+            <div class="ptop"><h3>AI 工作流引擎与编排平台</h3><span class="meta">2025 – 至今</span></div>
+            
+            <p class="desc" style="font-size: 15.5px; color: #111114; text-align: left; height: 100%; width: 100%; max-width: none"><span style="color: rgb(107, 107, 118); font-size: 14px; background-color: rgb(255, 255, 255)">针对跨境电商商品资料生产与上架场景，定义原子能力与工作流模板，引入「人工审核 + AI 执行」混合机制。浏览器采集插件作为数据入口，打通采集→清洗→AI 处理→上架整条链路。</span></p><div class="metrics" style="justify-content: space-between"><div><b>500→4000</b><span>日均开款量（8×）</span></div><div><b>10→40</b><span>人均管理店铺（4×）</span></div><div style="width: 117px; height: 50px"><b>80%+</b><span>核心流程覆盖</span></div></div>
+            
+            
+            
+            <div class="image-stack"><img class="stack-over" src="assets/workflow-detail.png" alt="工作流链路补充图" style="width: 429px; height: 243px; left: 332px; top: 174px; object-fit: cover; object-position: 100% 49.351%; object-view-box: inset(10.1694% 0% 10.4369% 28.9946%)"><img class="stack-main" src="assets/workflow-sample.png" alt="AI 工作流示例" style="object-fit: cover; object-position: 50% 27.102%"></div>
         </div>
-        <div class="demo">
-          <h4>示例体验 · 跑一次全链路</h4>
-          <button class="btn" onclick="runPipe()">▶ 运行工作流</button>
-          <div class="steps" id="steps"><span class="step">01 采集</span><span class="step">02 清洗</span><span class="step">03 图像</span><span class="step">04 风控</span><span class="step">05 上架</span></div>
         </div>
-        <div class="demo" style="margin-top:14px">
-          <h4>数据入口 · 浏览器采集插件</h4>
-          <div class="plugin-flow">
-            <span>一键采集商品数据<i>→</i>字段标准化<i>→</i>回传清洗<i>→</i>AI 处理<i>→</i>上架</span>
+        <div data-case-panel="editor" style="display:none">
+        <div class="panel">
+            
+            <div class="ptop"><h3>可视化编辑器</h3><span class="meta">2024.05 – 2025.03</span></div>
+            <p class="desc" style="font-size: 15.5px; color: #111114; text-align: left; height: 100%; width: 100%; max-width: none"><span style="color: rgb(107, 107, 118); font-size: 14px; background-color: rgb(255, 255, 255)">SHOPLINE 主题编辑器：把页面组件原子级拆解与标准化，扩展 Flexbox 布局，支持多市场差异化装修，并搭建主题商城生态。</span><a class="nextcase" href="https://www.shopline.com/themes" target="_blank" style="text-align: start">项目介绍：shopline.com/themes ↗</a></p>
+            <div class="metrics" style="justify-content: space-between"><div><b>30%+</b><span>主题开发效率提升</span></div><div style="width: 126px"><b>多市场</b><span>全球化运营</span></div><div style="width: 107px"><b>千万级</b><span>KA 商家 GMV</span></div></div><img class="cover-img" src="assets/editor-sample.webp" alt="独立站编辑器示例" style="width: 100%; height: 424px; object-fit: cover; object-position: 50% 0.0009%">
+            
+            
+            
+            
           </div>
-          <p class="cfootnote">职责：定义采集字段、交互流程与数据回传/清洗标准，打通“采集 → 清洗 → AI 处理”数据链路。</p>
         </div>
-        <button class="nextcase" data-next="p-editor">下一个案例：独立站可视化编辑器 →</button>
-      </section>
-
-      <section class="panel" id="p-editor">
-        <img class="cover-img" src="assets/editor-sample.webp" alt="独立站编辑器示例">
-        <div class="ptop"><h3>独立站可视化编辑器（SHOPLINE 主题编辑器）</h3><span class="meta">2024.05 – 2025.03</span></div>
-        <p class="desc" style="font-size:15.5px;color:#111114;text-align:left;height:100%;width:100%;max-width:none"><span style="color:#6b6b76;font-size:14px;background:#fff">SHOPLINE 主题编辑器：把页面组件原子级拆解与标准化，扩展 Flexbox 布局模型，支持多市场差异化装修，并搭建主题商城生态。</span></p>
-        <div class="metrics">
-          <div><b>30%+</b><span>主题开发复用率提升</span></div>
-          <div><b>千万级</b><span>KA 商家落地</span></div>
-          <div><b>多市场</b><span>全球化运营</span></div>
+        <div data-case-panel="practice" style="display:none">
+        <div class="panel">
+            <div class="ptop"><h3>个人AI实践</h3><span class="meta">开源 · 个人项目</span></div>
+            <p class="desc" style="font-size: 15.5px; color: #111114; text-align: left; height: 100%; width: 100%; max-width: none"><span style="color: rgb(107, 107, 118); font-size: 14px; background-color: rgb(255, 255, 255)">把 AI 变成自己的日常工具：基于DSH插件生态，搭建个人工作AI相关基础工具。&nbsp;把需求生成可编辑画布原型；改造并开源 DSH 插件，沉淀 Agent 工作流与产品化实践。</span></p>
+            <img class="cover-img" src="assets/ai-canvas-sample.png" alt="AI 画布编辑器示例" style="width: 757px; object-fit: cover; object-position: 50% 0.0029%; height: 393px"><div class="project-pair">
+              
+              
+            </div>
         </div>
-        <div class="editor-grid">
-          <div class="ecard"><h4>主题架构升级</h4><p>页面组件原子级拆解与标准化，构建基础组件库与可复用组件体系；基于 Flexbox 扩展布局模型。</p></div>
-          <div class="ecard"><h4>多市场装修</h4><p>构建“基础配置 + 单市场差异化配置”体系，支持同一主题在不同国家/地区独立装修。</p></div>
-          <div class="ecard"><h4>生态商业化</h4><p>0→1 搭建主题商城生态，建立第三方开发者入驻与审核发布流程，提升主题供给与商业价值。</p></div>
         </div>
-        <div class="ai-note"><b>可拓展 AI 编辑能力：</b>自然语言生成页面、批量文案 / 素材改写、多市场本地化建议（方向，非已交付功能）。</div>
-        <a class="nextcase" href="https://www.shopline.com/themes" target="_blank">项目介绍：shopline.com/themes ↗</a>
-        <button class="nextcase" data-next="p-practice">下一个案例：个人实践 →</button>
-      </section>
-
-      <section class="panel" id="p-practice">
-        <div class="ptop"><h3>个人AI实践</h3><span class="meta">开源 · 个人项目</span></div>
-        <p class="desc" style="font-size:15.5px;color:#111114;text-align:left;height:100%;width:100%;max-width:none"><span style="color:#6b6b76;font-size:14px;background:#fff">把 AI 变成自己的日常工具：用 DSH 把需求生成可编辑画布原型；改造并开源 DSH 插件，沉淀 Agent 工作流与产品化实践。</span></p>
-        <div class="project-pair">
-          <article class="mini-project">
-            <img class="cover-img" src="assets/ai-canvas-sample.png" alt="AI 画布编辑器示例">
-            <h4>AI 画布编辑器</h4>
-            <p>用 DSH 把产品需求直接生成为可视化“画布”原型，缩短方案沟通与验证周期。</p>
-            <a class="mini-link" href="https://github.com/erinwangstudio-art/yayidesign" target="_blank">项目介绍 ↗</a>
-          </article>
-          <article class="mini-project">
-            <img class="cover-img" src="assets/dsh-plugin-sample.png" alt="dsh-trafficlight 示例">
-            <h4>dsh-trafficlight 插件</h4>
-            <p>按会话的红 / 黄 / 绿状态灯、macOS 原生悬浮窗、可停靠侧栏与订阅会话导航；已上架 DSH 插件市场。</p>
-            <a class="mini-link" href="https://github.com/erinwangstudio-art/dsh-trafficlight" target="_blank">查看 GitHub ↗</a>
-          </article>
-        </div>
-        <button class="nextcase" data-next="p-workflow">回到第一个案例 →</button>
-      </section>
+      </div>
     </div>
+
+        <div data-deep-case="workflow" style="display:block">
+    <section class="case">
+      <div class="chead"><h2>AI商品生产链路</h2><span class="cnote" style="font-weight:400">脱敏示例 · 数据为演示模拟值</span></div>
+      <div class="story icons">
+        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M8 13h8M8 17h8"></path></svg><b>背景</b><span>Temu POD业务，商品生产与上架链路传统方式依赖运营个人经验，跟进竞品/热门商品，采集原素材，进行素材加工后规避平台风险，最终录入商品数据平台上架；涉及采集、清洗、图像处理、风险识别和上架等多个环节。</span></div>
+        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg><b>核心问题</b><span>依赖个人经验、处理工具分散、难以沉淀经验工团队使用，人工处理成为规模化扩张的瓶颈。</span></div>
+        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"></path><path d="m3 12 9 5 9-5"></path><path d="m3 17 9 5 9-5"></path></svg><b>解决方式</b><span>定义原子能力与工作流模板，引入「人工审核 + AI 执行」混合机制，并通过浏览器采集插件统一数据入口。</span></div>
+        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><b>我的作用</b><span>主导定义原子能力、工作流编排与人机协同机制；<span class="todo">[请补充：正式角色、团队规模、负责边界]</span></span></div>
+        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2"></circle><circle cx="19" cy="6" r="2"></circle><circle cx="12" cy="18" r="2"></circle><path d="M6.7 7.2 10.8 16M17.3 7.2 13.2 16M7 6h10"></path></svg><b>推进过程</b><span>梳理链路 → 拆分能力节点 → 定义输入输出契约 / 阈值 / 失败降级 → 协同工程实现 → 用覆盖率、成本与人工复核口径评测迭代；<span class="todo">[请补充：关键调研对象、上线节奏、你做的关键决策]</span></span></div>
+      </div>
+      
+      
+      
+      <div class="ctabs">
+        <button class="ctab on" data-ct="p1">① 工作流编排 · 点节点看配置</button>
+        <button class="ctab" data-ct="p2">② AI 能力库 · 10 类能力</button>
+      </div>
+      <div data-ct-panel="p1" style="display:block">
+        <div class="cbuilder">
+          <div class="cside"><h3>流程模板</h3><div class="ctpl on"><b>跟款选品</b><span>采集 → 上架　7 节点</span></div><div class="ctpl"><b>跟卖贴图</b><span>logo → 贴图　6 节点</span></div><div class="ctpl"><b>自动化履约</b><span>抠图 → 蒙版　2 节点</span></div><div class="cdiv"></div><h3>本链路</h3><div class="ckv"><div class="k">端到端转化</div><div class="v">8.9%（45,691 → 4,078）</div></div><div class="ckv"><div class="k">单商品模型成本</div><div class="v">¥0.45</div></div><div class="ckv"><div class="k">人工介入节点</div><div class="v">2 / 7</div></div></div>
+          <div class="ccanvas"><div class="cgrid3" data-node-grid></div></div>
+          <div class="ccfg" data-cfg><div class="title"></div><div class="role"></div><div class="ckv"><div class="k">输入 / 输出契约</div><div class="v"></div></div><div class="ckv"><div class="k">拒答边界</div><div class="v"></div></div><div class="ckv"><div class="k">阈值</div><div class="v"></div></div><div class="ckv"><div class="k">失败降级路径</div><div class="v"></div></div><div class="cdiv"></div><div class="ckv"><div class="k">已知失效模式</div><div class="v" style="color:#b4690e"></div></div></div>
+        </div>
+      </div>
+      <div data-ct-panel="p2" style="display:none">
+        <div class="ctablewrap"><table class="ccap"><thead><tr><th style="width:150px">能力</th><th>产出物</th><th class="num">任务量</th><th class="num">覆盖率</th><th class="num">返回准确率</th><th class="num">人工复核</th><th class="num">单次成本</th><th style="width:120px">单产出成本</th></tr></thead><tbody data-cap-rows></tbody></table></div>
+        <p class="cfootnote">口径：以人工复核结果为 gold standard，分层抽 200 条；单产出成本 =（模型 + 人工 + 返工）÷ 正确产出数。</p>
+      </div>
+    </section>
+        </div>
+
+        <div data-deep-case="editor" style="display:none">
+    <section class="case">
+      <div class="chead"><h2>独立站编辑器案例拆解</h2><span class="cnote" style="font-weight:400">主题系统 · 案例拆解</span></div>
+      <div class="story">
+        <div class="story-row"><b>背景</b><span>全球独立站商家需要低成本搭建站点与多市场装修，主题开发依赖代码，复用与交付效率受限。</span></div>
+        <div class="story-row"><b>核心问题</b><span>页面组件不标准、布局扩展能力有限、多市场配置重复，主题供给与开发者生态需要规模化机制。</span></div>
+        <div class="story-row"><b>解决方式</b><span>把页面组件原子级拆解与标准化，扩展 Flexbox 布局模型；用「基础配置 + 单市场差异化配置」支持全球化运营，并搭建主题商城生态。</span></div>
+        <div class="story-row"><b>我的作用</b><span>围绕组件模型、装修交互与配置体系做产品方案设计；<span class="todo">[请补充：正式角色、主导模块、协作对象]</span></span></div>
+        <div class="story-row"><b>推进过程</b><span>梳理页面组件 → 抽象基础组件库 → 设计配置层级与多市场规则 → 协同设计 / 前端 / KA 商家验证 → 建立主题商城接入流程；<span class="todo">[请补充：具体调研、评审、灰度或上线动作]</span></span></div>
+      </div>
+      <div class="editor-grid">
+        <div class="ecard"><h4>主题架构升级</h4><p>页面组件原子级拆解与标准化，构建基础组件库与可复用组件体系；基于 Flexbox 扩展布局模型。</p></div>
+        <div class="ecard"><h4>多市场装修</h4><p>构建“基础配置 + 单市场差异化配置”体系，支持同一主题在不同国家/地区独立装修。</p></div>
+        <div class="ecard"><h4>生态商业化</h4><p>0→1 搭建主题商城生态，建立第三方开发者入驻与审核发布流程，提升主题供给与商业价值。</p></div>
+      </div>
+      
+      
+    </section>
+        </div>
+
+        <div data-deep-case="practice" style="display:none">
+    <section class="case">
+      <div class="chead"><h2>个人AI实践案例拆解</h2><span class="cnote" style="font-weight:400">个人项目 · 案例拆解</span></div>
+
+      <div class="project-block">
+        <div class="subhead"><h3>AI 画布编辑器</h3><span class="cnote">需求生成可编辑画布</span></div>
+        <div class="story">
+          <div class="story-row"><b>背景</b><span>基于开源编辑器项目，增加针对PM日常工作相关功能；</span></div>
+          <div class="story-row"><b>核心问题</b><span>便于快速修改，与Agent协同修改，涉及页面交互展开便于评审使用</span></div>
+          <div class="story-row"><b>解决方式</b><span>定义需求输入与画布元素映射，用 DSH 生成可继续修改的画布原型。</span></div>
+          <div class="story-row"><b>我的作用</b><span>独立完成需求定义、产品原型与交互设计；<span class="todo">[请补充：是否独立开发、具体技术角色、版本贡献]</span></span></div>
+          <div class="story-row"><b>推进过程</b><span>已有开源项目体验：open design, huashu skill, 定义需求输入 → 设计画布元素映射 → 验证可编辑性 → 开源案例；<span class="todo">[请补充：关键迭代、用户反馈或发布节点]</span></span></div>
+        </div>
+        <div class="editor-grid" style="grid-template-columns:1fr">
+          <div class="ecard"><h4>案例结果</h4><p>用 DSH 把产品需求直接生成为可视化“画布”原型，缩短方案验证周期。案例开源：github.com/erinwangstudio-art/yayidesign。</p></div>
+        </div>
+      </div>
+
+      <div class="project-block">
+        <div class="subhead"><h3>dsh-trafficlight 插件</h3><span class="cnote">会话状态可视化</span></div>
+        <div class="story">
+          <div class="story-row"><b>背景</b><span>使用 DSH 推进多会话任务时，需要关注重点任务进行，随时感知会话执行状态。</span></div>
+          <div class="story-row"><b>核心问题</b><span>打开面板对话分散逐个确认，并行任务管理效率低。</span></div>
+          <div class="story-row"><b>解决方式</b><span>把重点关注会话状态映射为红 / 黄 / 绿灯，并提供 macOS 悬浮窗常驻提醒，支持点击快速进入对应对话窗口。</span></div>
+          <div class="story-row"><b>我的作用</b><span>基于开源插件迭代功能、交互规则与实践；</span></div>
+          <div class="story-row"><b>推进过程</b><span>找现有插件→ 补充缺少场景 → 设计交互规则 → 开发插件 → 上架插件市场</span></div>
+        </div>
+        <div class="editor-grid" style="grid-template-columns:1fr">
+          <div class="ecard"><h4>案例结果</h4><p>按会话状态提示、macOS 悬浮窗与可停靠侧栏；已上架 DSH 插件市场。GitHub：github.com/erinwangstudio-art/dsh-trafficlight。</p></div>
+        </div>
+        
+      </div>
+    </section>
+        </div>
+
+    
   </div>
-
-  <section class="case deepcase on" id="workflow" data-deep="p-workflow">
-    <div class="chead">
-      <div>
-        <h2>深度案例 · AI 商品生产链路</h2>
-        <p class="clead">7 个原子能力串成一条生产链路：节点的输入输出契约、置信度阈值、失败降级由产品定义，执行层由工程实现。点节点看契约，切 tab 看能力库与评测。</p>
-      </div>
-      <span class="cnote">脱敏示例 · 数据为演示模拟值</span>
-    </div>
-    <div class="story icons">
-      <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8"/></svg><b>背景</b><span>跨境电商商品生产与上架链路长，涉及采集、清洗、图像处理、风险识别和上架等多个环节，人工重复度高。</span></div>
-      <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><b>核心问题</b><span>数据入口分散、链路难以统一编排，人工处理成为规模化扩张的瓶颈。</span></div>
-      <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg><b>解决方式</b><span>定义原子能力与工作流模板，引入「人工审核 + AI 执行」混合机制，并通过浏览器采集插件统一数据入口。</span></div>
-      <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><b>我的作用</b><span>主导定义原子能力、工作流编排与人机协同机制。<span class="todo">[请补充：正式角色、团队规模、负责边界]</span></span></div>
-      <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M6.7 7.2 10.8 16M17.3 7.2 13.2 16M7 6h10"/></svg><b>推进过程</b><span>梳理链路 → 拆分能力节点 → 定义输入输出契约 / 阈值 / 失败降级 → 协同工程实现 → 用覆盖率、成本与人工复核口径评测迭代。<span class="todo">[请补充：关键调研对象、上线节奏、你做的关键决策]</span></span></div>
-    </div>
-    <div class="ph ph-wide"><b>配图 09</b><span>AI 商品生产链路示意图</span><small>建议 21:9 · 请提供图片</small></div>
-    <div class="ctabs">
-      <button class="ctab on" data-cp="case-p1">① 工作流编排 <span style="color:var(--muted);font-size:11px">点节点看配置</span></button>
-      <button class="ctab" data-cp="case-p2">② AI 能力库 <span style="color:var(--muted);font-size:11px">10 类能力</span></button>
-    </div>
-
-    <div class="cpanel on" id="case-p1">
-      <div class="cbuilder">
-        <div class="cside">
-          <h3>流程模板</h3>
-          <div class="ctpl on"><b>跟款选品</b><span>采集 → 上架　7 节点</span></div>
-          <div class="ctpl"><b>跟卖贴图</b><span>logo → 贴图　6 节点</span></div>
-          <div class="ctpl"><b>自动化履约</b><span>抠图 → 蒙版　2 节点</span></div>
-          <div class="cdiv"></div>
-          <h3>本链路</h3>
-          <div class="ckv"><div class="k">端到端转化</div><div class="v">8.9%（45,691 → 4,078）</div></div>
-          <div class="ckv"><div class="k">单商品模型成本</div><div class="v">¥0.45</div></div>
-          <div class="ckv"><div class="k">人工介入节点</div><div class="v">2 / 7</div></div>
-        </div>
-        <div class="ccanvas" id="caseCanvas">
-          <svg class="clinks" id="caseLinks"></svg>
-          <div class="cgrid3" id="caseNodes"></div>
-        </div>
-        <div class="ccfg" id="caseCfg"></div>
-      </div>
-    </div>
-
-    <div class="cpanel" id="case-p2">
-      <div class="ctablewrap"><table class="ccap"><thead><tr><th style="width:150px">能力</th><th>产出物</th><th class="num">任务量</th><th class="num">覆盖率</th><th class="num">返回准确率</th><th class="num">人工复核</th><th class="num">单次成本</th><th style="width:120px">单产出成本</th></tr></thead><tbody id="caseCapBody"></tbody></table></div>
-      <p class="cfootnote">口径：以人工复核结果为 gold standard，按类目与图片质量分层抽 200 条；单产出成本 =（模型成本 + 人工成本 + 返工成本）÷ 正确产出数。</p>
-    </div>
-
-  </section>
-
-  <section class="case deepcase" data-deep="p-editor">
-    <div class="chead"><div><h2>独立站编辑器案例拆解</h2><p class="clead">主题系统 · 案例拆解</p></div><span class="cnote">主题系统 · 案例拆解</span></div>
-    <div class="story">
-      <div class="story-row"><b>背景</b><span>全球独立站商家需要低成本搭建站点与多市场装修，主题开发依赖代码，复用与交付效率受限。</span></div>
-      <div class="story-row"><b>核心问题</b><span>页面组件不标准、布局扩展能力有限、多市场配置重复，主题供给与开发者生态需要规模化机制。</span></div>
-      <div class="story-row"><b>解决方式</b><span>把页面组件原子级拆解与标准化，扩展 Flexbox 布局模型；用「基础配置 + 单市场差异化配置」支持全球化运营，并搭建主题商城生态。</span></div>
-      <div class="story-row"><b>我的作用</b><span>围绕组件模型、装修交互与配置体系做产品方案设计。<span class="todo">[请补充：正式角色、主导模块、协作对象]</span></span></div>
-      <div class="story-row"><b>推进过程</b><span>梳理页面组件 → 抽象基础组件库 → 设计配置层级与多市场规则 → 协同设计 / 前端 / KA 商家验证 → 建立主题商城接入流程。<span class="todo">[请补充：具体调研、评审、灰度或上线动作]</span></span></div>
-    </div>
-    <div class="editor-grid">
-      <div class="ecard"><h4>主题架构升级</h4><p>页面组件原子级拆解与标准化，构建基础组件库与可复用组件体系；基于 Flexbox 扩展布局模型。</p></div>
-      <div class="ecard"><h4>多市场装修</h4><p>构建“基础配置 + 单市场差异化配置”体系，支持同一主题在不同国家/地区独立装修。</p></div>
-      <div class="ecard"><h4>生态商业化</h4><p>0→1 搭建主题商城生态，建立第三方开发者入驻与审核发布流程，提升主题供给与商业价值。</p></div>
-    </div>
-    <div class="ai-note"><b>可拓展 AI 编辑能力：</b>自然语言生成页面、批量文案 / 素材改写、多市场本地化建议（方向，非已交付功能）。</div>
-    <a class="nextcase" href="https://www.shopline.com/themes" target="_blank">项目介绍：shopline.com/themes ↗</a>
-  </section>
-
-  <section class="case deepcase" data-deep="p-practice">
-    <div class="chead"><div><h2>个人AI实践案例拆解</h2><p class="clead">个人项目 · 案例拆解</p></div><span class="cnote">个人项目 · 案例拆解</span></div>
-
-    <div class="project-block">
-      <div class="subhead"><h3>AI 画布编辑器</h3><span class="cnote">需求生成可编辑画布</span></div>
-      <div class="story">
-        <div class="story-row"><b>背景</b><span>希望把 AI 变成日常工具，用 DSH 将需求直接生成可编辑画布原型。</span></div>
-        <div class="story-row"><b>核心问题</b><span>需求到可评审原型的链路长，方案沟通与验证周期长。</span></div>
-        <div class="story-row"><b>解决方式</b><span>定义需求输入与画布元素映射，用 DSH 生成可继续修改的画布原型。</span></div>
-        <div class="story-row"><b>我的作用</b><span>独立完成需求定义、产品原型与交互设计。<span class="todo">[请补充：是否独立开发、具体技术角色、版本贡献]</span></span></div>
-        <div class="story-row"><b>推进过程</b><span>定义需求输入 → 设计画布元素映射 → 验证可编辑性 → 开源案例。<span class="todo">[请补充：关键迭代、用户反馈或发布节点]</span></span></div>
-      </div>
-      <div class="editor-grid" style="grid-template-columns:1fr">
-        <div class="ecard"><h4>案例结果</h4><p>用 DSH 把产品需求直接生成为可视化“画布”原型，缩短方案验证周期。案例开源：github.com/erinwangstudio-art/yayidesign。</p></div>
-      </div>
-    </div>
-
-    <div class="project-block">
-      <div class="subhead"><h3>dsh-trafficlight 插件</h3><span class="cnote">会话状态可视化</span></div>
-      <div class="story">
-        <div class="story-row"><b>背景</b><span>使用 DSH 推进多会话任务时，需要随时感知会话执行状态。</span></div>
-        <div class="story-row"><b>核心问题</b><span>红 / 黄 / 绿状态需要打开面板逐个确认，并行任务管理效率低。</span></div>
-        <div class="story-row"><b>解决方式</b><span>把会话状态映射为红 / 黄 / 绿灯，并提供 macOS 悬浮窗、可停靠侧栏与订阅会话导航。</span></div>
-        <div class="story-row"><b>我的作用</b><span>独立完成插件的产品原型、交互规则与实践。<span class="todo">[请补充：是否独立开发、具体技术角色、版本贡献]</span></span></div>
-        <div class="story-row"><b>推进过程</b><span>定义状态模型 → 设计交互规则 → 开发插件 → 上架插件市场。<span class="todo">[请补充：关键迭代、用户反馈或发布节点]</span></span></div>
-      </div>
-      <div class="editor-grid" style="grid-template-columns:1fr">
-        <div class="ecard"><h4>案例结果</h4><p>按会话状态提示、macOS 悬浮窗与可停靠侧栏；已上架 DSH 插件市场。GitHub：github.com/erinwangstudio-art/dsh-trafficlight。</p></div>
-      </div>
-      <div class="demo" style="margin-top:14px">
-        <h4>示例体验 · 点会话切状态灯</h4>
-        <div class="sessions" id="sessPractice"><button class="sess" data-s="ok"><span class="lamp"></span>简历优化 · 已完成<small>绿</small></button><button class="sess" data-s="run"><span class="lamp"></span>订单模块开发 · 执行中<small>黄</small></button><button class="sess" data-s="block"><span class="lamp"></span>数据迁移 · 等待批准<small>红</small></button></div>
-      </div>
-    </div>
-  </section>
-
-  <p style="padding:28px 0 0"><a class="more" href="experience.html">看完整职业经历 →</a></p>
-</main>
-
-<footer class="site-footer wrap">
-  <span>王雅一 · AI 产品经理 · 项目案例</span>
-  <span><a href="index.html">返回首页</a></span>
-</footer>
-
+</div>
 <script>
-function selectCase(id){
-  document.querySelectorAll('#idx li').forEach(x=>x.classList.toggle('on',x.dataset.p===id));
-  document.querySelectorAll('.casebar .ctab-mini').forEach(x=>x.classList.toggle('on',x.dataset.p===id));
-  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===id));
-  document.querySelectorAll('.deepcase').forEach(d=>d.classList.toggle('on',d.dataset.deep===id));
-}
-document.getElementById('idx').addEventListener('click',e=>{
-  const li=e.target.closest('li'); if(!li)return; selectCase(li.dataset.p);
-});
-document.querySelector('.casebar').addEventListener('click',e=>{
-  const b=e.target.closest('.ctab-mini'); if(!b)return; selectCase(b.dataset.p);
-});
-document.querySelectorAll('.nextcase').forEach(b=>b.addEventListener('click',()=>selectCase(b.dataset.next)));
-if(location.hash && ['p-workflow','p-editor','p-practice'].includes(location.hash.slice(1))){ selectCase(location.hash.slice(1)); } else { selectCase('p-workflow'); }
-function runPipe(){
-  const steps=[...document.querySelectorAll('#steps .step')];
-  steps.forEach(s=>s.classList.remove('on'));
-  let i=0;const t=()=>{if(i<steps.length){steps[i].classList.add('on');i++;setTimeout(t,380);}};t();
-}
-document.querySelectorAll('.sessions').forEach(box=>box.addEventListener('click',e=>{
-  const s=e.target.closest('.sess');if(!s)return;
-  const next={ok:'run',run:'block',block:'ok'}[s.dataset.s]||'ok';
-  s.dataset.s=next;s.querySelector('small').textContent={ok:'绿',run:'黄',block:'红'}[next];
-}));
+const CASE_NODES = [
+      { id:'logo', name:'logo 检测', cost:'¥0.0095', cap:'100%', type:'ok', human:'否', role:'检测定位 · 主指标看召回', io:'入：640×640 图　出：框 ×N + 类别 + 置信度', stop:'无框或最高置信度 < 0.45 时拒答', th:'置信度 0.45；漏检代价高，阈值偏松', fb:'超时 → 规则兜底（长宽比 + 位置先验）→ 人工队列', fail:'小尺寸 logo、半透明水印 logo 漏检' },
+      { id:'qual', name:'图片质量检测', cost:'¥0.0037', cap:'94%', type:'ok', human:'否', role:'二分类 · 便宜的前置闸门', io:'入：原图　出：pass / fail + 原因码', stop:'分辨率或模糊度临界时给出 fail 原因，不下结论', th:'短边 ≥ 800px、模糊度阈值固定', fb:'判定失败直接退回首图环节', fail:'逆光、纯色底误判为过曝' },
+      { id:'color', name:'底衫颜色检测', cost:'¥0.0040', cap:'92%', type:'ok', human:'否', role:'分类 · 客观可自动', io:'入：底衫图　出：色系 + 色号 + 置信度', stop:'置信度 < 0.6 转人工', th:'0.60；错色影响推荐，阈值偏高', fb:'失败 → 取上游 SKU 属性兜底', fail:'同色系不同光照（米白 / 象牙白）' },
+      { id:'fit', name:'底衫版型检测', cost:'¥0.0260', cap:'87%', type:'human', human:'是', role:'多维度分层识别 · 本链路最贵', io:'入：底衫图　出：性别 / 领型 / 袖型 / 面料 四维独立置信度', stop:'任一维度低于该维阈值 → 不整条拒答，带 top3 候选转人工', th:'性别 0.75｜领型 0.70｜袖型 0.70｜面料 0.55', fb:'超时 → 规则兜底 → 人工队列（附 top3 候选）', fail:'面料在弱光、低分辨率下不可判；68% 错误集中于此' },
+      { id:'dedup', name:'商品图片去重', cost:'¥0.0013', cap:'36%', type:'ok', human:'20%', role:'检索匹配 · 阈值决策', io:'入：图 + 元数据　出：同款簇 ID + 相似度', stop:'相似度 0.83–0.90 灰区给出候选对，不自动合并', th:'0.87；低于 0.85 会误合并同色系不同款', fb:'向量库不可用 → 退化为元数据强规则去重', fail:'同款不同角度、加字改色后漏合并' },
+      { id:'right', name:'侵权检测', cost:'¥0.0080', cap:'73%', type:'human', human:'50%', role:'风险判别 · 代价不对称', io:'入：图案 + 类目　出：风险等级 + 命中理由', stop:'中风险不自动放行，进人工仲裁队列', th:'漏检代价 ≫ 误杀，阈值按类目分档', fb:'服务异常 → 一律拦截转人工', fail:'二次创作、局部改色、字体类商标' },
+      { id:'info', name:'商品信息准备', cost:'¥0.0240', cap:'45%', type:'ok', human:'否', role:'生成 · 用可用率不用准确率', io:'入：属性 + 图案 + 类目规则　出：标题 / 五点 / 描述', stop:'触发禁用词 → 不输出，回退模板', th:'硬规则 pass/fail，不做置信度', fb:'生成失败 → 模板占位 + 人工补全', fail:'长尾类目术语不准、多语言生硬' }
+    ];
+const CAP_ROWS = [
+      { n:'logo 检测', o:'框 + 类别 + 置信度', t:'45,691', c:'100%', a:'—', h:'0%', cost:'¥0.0095', w:'1.5%', hot:'' },
+      { n:'图片质量检测', o:'pass / fail + 原因码', t:'43,021', c:'100%', a:'96%', h:'0%', cost:'¥0.0037', w:'0.6%', hot:'' },
+      { n:'底衫颜色检测', o:'色系 + 色号', t:'39,667', c:'96%', a:'94%', h:'0%', cost:'¥0.0040', w:'0.6%', hot:'' },
+      { n:'底衫版型检测', o:'四维标签 + 置信度', t:'34,602', c:'50%', a:'92%', h:'100%', cost:'¥0.0260', w:'8%', hot:'hot' },
+      { n:'商品图片去重', o:'同款簇 ID + 相似度', t:'12,531', c:'100%', a:'97%', h:'20%', cost:'¥0.0013', w:'0.3%', hot:'' },
+      { n:'侵权检测', o:'风险等级 + 命中理由', t:'9,131', c:'73%', a:'89%', h:'50%', cost:'¥0.0080', w:'2.3%', hot:'' },
+      { n:'商品信息准备', o:'标题 / 五点 / 描述', t:'4,078', c:'100%', a:'—', h:'0%', cost:'¥0.0240', w:'3.7%', hot:'' },
+      { n:'logo 提取', o:'透明底图案', t:'4,121', c:'31%', a:'—', h:'0%', cost:'¥0.2017', w:'100%', hot:'hot' },
+      { n:'抠图', o:'透明底图 + 蒙版', t:'3,451', c:'84%', a:'—', h:'0%', cost:'¥0.0800', w:'14.6%', hot:'' },
+      { n:'底衫/颜色匹配', o:'匹配结果 ×N（扇出）', t:'13,911', c:'—', a:'—', h:'0%', cost:'¥0.1009', w:'3.8%', hot:'' }
+    ];
+const CFG = {}; CASE_NODES.forEach(n => { CFG[n.id] = n; });
+let selectedNode = 'fit';
 
-/* deep case */
-document.querySelectorAll('.ctab').forEach(t=>{
-  t.onclick=()=>{
-    document.querySelectorAll('.ctab').forEach(x=>x.classList.remove('on'));
-    document.querySelectorAll('.cpanel').forEach(x=>x.classList.remove('on'));
-    t.classList.add('on'); document.getElementById(t.dataset.cp).classList.add('on');
-    if(t.dataset.cp==='case-p1') requestAnimationFrame(drawCaseLinks);
-  };
-});
-const CASE_NODES=[
-  {id:'logo',name:'logo 检测',row:0,col:0,cost:'¥0.0095',cap:'100%',type:'ok',human:'否'},
-  {id:'qual',name:'图片质量检测',row:0,col:1,cost:'¥0.0037',cap:'94%',type:'ok',human:'否'},
-  {id:'color',name:'底衫颜色检测',row:0,col:2,cost:'¥0.0040',cap:'92%',type:'ok',human:'否'},
-  {id:'fit',name:'底衫版型检测',row:1,col:2,cost:'¥0.0260',cap:'87%',type:'human',human:'是'},
-  {id:'dedup',name:'商品图片去重',row:1,col:1,cost:'¥0.0013',cap:'36%',type:'ok',human:'20%'},
-  {id:'right',name:'侵权检测',row:1,col:0,cost:'¥0.0080',cap:'73%',type:'human',human:'50%'},
-  {id:'info',name:'商品信息准备',row:2,col:0,cost:'¥0.0240',cap:'45%',type:'ok',human:'否'}
-];
-const CASE_CFG={
-  logo:{title:'logo 检测',role:'检测定位 · 主指标看召回',io:'入：640×640 图　出：框 ×N + 类别 + 置信度',stop:'无框或最高置信度 < 0.45 时拒答',th:'置信度 0.45；漏检代价高，阈值偏松',fb:'超时 → 规则兜底（长宽比 + 位置先验）→ 人工队列',fail:'小尺寸 logo、半透明水印 logo 漏检'},
-  qual:{title:'图片质量检测',role:'二分类 · 便宜的前置闸门',io:'入：原图　出：pass / fail + 原因码',stop:'分辨率或模糊度临界时给出 fail 原因，不下结论',th:'短边 ≥ 800px、模糊度阈值固定，不做模型置信度',fb:'判定失败直接退回首图环节，不进入下游',fail:'逆光、纯色底误判为过曝'},
-  color:{title:'底衫颜色检测',role:'分类 · 客观可自动',io:'入：底衫图　出：色系 + 色号 + 置信度',stop:'置信度 < 0.6 转人工',th:'0.60；错色影响推荐，阈值偏高',fb:'失败 → 取上游 SKU 属性兜底',fail:'同色系不同光照（米白 / 象牙白）'},
-  fit:{title:'底衫版型检测',role:'多维度分层识别 · 本链路最贵',io:'入：底衫图　出：性别 / 领型 / 袖型 / 面料 四维独立置信度',stop:'任一维度低于该维阈值 → 不再整条拒答，改为带 top3 候选转人工',th:'性别 0.75｜领型 0.70｜袖型 0.70｜面料 0.55',fb:'超时 → 规则兜底 → 人工队列（附 top3 候选）',fail:'面料在弱光、低分辨率下不可判；68% 错误集中于此'},
-  dedup:{title:'商品图片去重',role:'检索匹配 · 阈值决策',io:'入：图 + 元数据（类目 / 店铺 / 上架时间）　出：同款簇 ID + 相似度',stop:'相似度落在 0.83–0.90 灰区时给出候选对，不自动合并',th:'0.87；低于 0.85 会把同色系不同款误合并',fb:'向量库不可用 → 退化为元数据强规则去重',fail:'同款不同角度、加字改色后漏合并'},
-  right:{title:'侵权检测',role:'风险判别 · 代价不对称',io:'入：图案 + 类目　出：风险等级 + 命中理由 + 相似来源',stop:'中风险不自动放行，进人工仲裁队列',th:'漏检代价 ≫ 误杀，阈值按类目分档',fb:'服务异常 → 一律拦截转人工（不放行）',fail:'二次创作、局部改色、字体类商标'},
-  info:{title:'商品信息准备',role:'生成 · 用可用率不用准确率',io:'入：属性 + 图案 + 类目规则　出：标题 / 五点 / 描述',stop:'关键词未覆盖或触发平台禁用词 → 不输出，回退模板',th:'硬规则 pass/fail，不做置信度',fb:'生成失败 → 模板占位 + 人工补全',fail:'长尾类目术语不准、多语言本地化生硬'}
-};
-const caseCanvas=document.getElementById('caseCanvas');
-const caseNodesEl=document.getElementById('caseNodes');
-if(caseNodesEl){
-  CASE_NODES.forEach(n=>{
-    const d=document.createElement('div');
-    d.className='cnode'; d.dataset.cid=n.id; d.style.gridRow=(n.row+1); d.style.gridColumn=(n.col+1);
-    d.innerHTML='<div class="nt">'+n.name+'</div><div class="nm"><span class="cdot '+n.type+'"></span>覆盖 '+n.cap+' · 人工 '+n.human+'</div><div class="cost">'+n.cost+'</div>';
-    d.onclick=()=>caseSelect(n.id); caseNodesEl.appendChild(d);
+function selectCase(id) {
+  document.querySelectorAll('[data-case-panel]').forEach(el => { el.style.display = el.dataset.casePanel === id ? '' : 'none'; });
+  document.querySelectorAll('[data-deep-case]').forEach(el => { el.style.display = el.dataset.deepCase === id ? '' : 'none'; });
+  document.querySelectorAll('[data-p]').forEach(el => { el.classList.toggle('on', el.dataset.p === id); });
+}
+document.querySelectorAll('[data-p]').forEach(el => el.addEventListener('click', () => selectCase(el.dataset.p)));
+
+document.querySelectorAll('[data-ct]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.dataset.ct;
+    document.querySelectorAll('[data-ct]').forEach(x => x.classList.toggle('on', x.dataset.ct === id));
+    document.querySelectorAll('[data-ct-panel]').forEach(p => { p.style.display = p.dataset.ctPanel === id ? '' : 'none'; });
   });
-  caseSelect('fit'); requestAnimationFrame(drawCaseLinks);
+});
+
+function renderNode(id) {
+  selectedNode = id;
+  const grid = document.querySelector('[data-node-grid]');
+  if (grid) grid.innerHTML = CASE_NODES.map(n => `<div class="cnode ${n.id === id ? 'on' : ''}" data-node="${n.id}"><div class="nt">${n.name}</div><div class="nm"><span class="cdot ${n.type}"></span>覆盖 ${n.cap} · 人工 ${n.human}</div><div class="cost">${n.cost}</div></div>`).join('');
+  const cfg = CFG[id] || CFG.fit;
+  const box = document.querySelector('[data-cfg]');
+  if (box) box.innerHTML = `<div class="title">${cfg.title}</div><div class="role">${cfg.role}</div><div class="ckv"><div class="k">输入 / 输出契约</div><div class="v">${cfg.io}</div></div><div class="ckv"><div class="k">拒答边界</div><div class="v">${cfg.stop}</div></div><div class="ckv"><div class="k">阈值</div><div class="v">${cfg.th}</div></div><div class="ckv"><div class="k">失败降级路径</div><div class="v">${cfg.fb}</div></div><div class="cdiv"></div><div class="ckv"><div class="k">已知失效模式</div><div class="v" style="color:#b4690e">${cfg.fail}</div></div>`;
 }
-function caseSelect(id){
-  document.querySelectorAll('.cnode').forEach(x=>x.classList.toggle('on',x.dataset.cid===id));
-  const c=CASE_CFG[id];
-  document.getElementById('caseCfg').innerHTML='<div class="title">'+c.title+'</div><div class="role">'+c.role+'</div><div class="ckv"><div class="k">输入 / 输出契约</div><div class="v">'+c.io+'</div></div><div class="ckv"><div class="k">拒答边界</div><div class="v">'+c.stop+'</div></div><div class="ckv"><div class="k">阈值</div><div class="v">'+c.th+'</div></div><div class="ckv"><div class="k">失败降级路径</div><div class="v">'+c.fb+'</div></div><div class="cdiv"></div><div class="ckv"><div class="k">已知失效模式</div><div class="v" style="color:#b4690e">'+c.fail+'</div></div>';
-}
-function drawCaseLinks(){
-  const svg=document.getElementById('caseLinks'); if(!svg)return;
-  const box=caseCanvas.getBoundingClientRect(); svg.setAttribute('viewBox','0 0 '+box.width+' '+box.height); svg.innerHTML='';
-  const order=['logo','qual','color','fit','dedup','right','info'];
-  for(let i=0;i<order.length-1;i++){
-    const a=document.querySelector('.cnode[data-cid="'+order[i]+'"]').getBoundingClientRect();
-    const b=document.querySelector('.cnode[data-cid="'+order[i+1]+'"]').getBoundingClientRect();
-    const ax=a.left-box.left, ay=a.top-box.top, bx=b.left-box.left, by=b.top-box.top;
-    const sameRow=Math.abs(ay-by)<6; let d;
-    if(sameRow && bx>ax){ const x1=ax+a.width,y1=ay+a.height/2,x2=bx,y2=by+b.height/2; d='M'+x1+','+y1+' C'+(x1+22)+','+y1+' '+(x2-22)+','+y2+' '+x2+','+y2; }
-    else if(sameRow){ const x1=ax,y1=ay+a.height/2,x2=bx+b.width,y2=by+b.height/2; d='M'+x1+','+y1+' C'+(x1-22)+','+y1+' '+(x2+22)+','+y2+' '+x2+','+y2; }
-    else { const x1=ax+a.width/2,y1=ay+a.height,x2=bx+b.width/2,y2=by; d='M'+x1+','+y1+' C'+x1+','+(y1+26)+' '+x2+','+(y2-26)+' '+x2+','+y2; }
-    const p=document.createElementNS('http://www.w3.org/2000/svg','path');
-    p.setAttribute('d',d); p.setAttribute('fill','none'); p.setAttribute('stroke','#c9c9e0'); p.setAttribute('stroke-width','1.4'); p.setAttribute('stroke-dasharray','4 3');
-    svg.appendChild(p);
-  }
-}
-window.addEventListener('resize',()=>{ const el=document.getElementById('case-p1'); if(el&&el.classList.contains('on')) drawCaseLinks(); });
-const CASE_CAPS=[
-  {n:'logo 检测',o:'框 + 类别 + 置信度',t:'45,691',c:'100%',a:'—',h:'0%',cost:'0.0095',per:0.010,hot:false},
-  {n:'图片质量检测',o:'pass / fail + 原因码',t:'43,021',c:'100%',a:'96%',h:'0%',cost:'0.0037',per:0.004,hot:false},
-  {n:'底衫颜色检测',o:'色系 + 色号',t:'39,667',c:'96%',a:'94%',h:'0%',cost:'0.0040',per:0.004,hot:false},
-  {n:'底衫版型检测',o:'四维标签 + 置信度',t:'34,602',c:'50%',a:'92%',h:'100%',cost:'0.0260',per:0.052,hot:true},
-  {n:'商品图片去重',o:'同款簇 ID + 相似度',t:'12,531',c:'100%',a:'97%',h:'20%',cost:'0.0013',per:0.002,hot:false},
-  {n:'侵权检测',o:'风险等级 + 命中理由',t:'9,131',c:'73%',a:'89%',h:'50%',cost:'0.0080',per:0.015,hot:false},
-  {n:'商品信息准备',o:'标题 / 五点 / 描述',t:'4,078',c:'100%',a:'—',h:'0%',cost:'0.0240',per:0.024,hot:false},
-  {n:'logo 提取',o:'透明底图案',t:'4,121',c:'31%',a:'—',h:'0%',cost:'0.2017',per:0.650,hot:true},
-  {n:'抠图',o:'透明底图 + 蒙版',t:'3,451',c:'84%',a:'—',h:'0%',cost:'0.0800',per:0.095,hot:false},
-  {n:'底衫/颜色匹配',o:'匹配结果 ×N（扇出）',t:'13,911',c:'—',a:'—',h:'0%',cost:'0.1009',per:0.025,hot:true}
-];
-const caseCapBody=document.getElementById('caseCapBody');
-if(caseCapBody){
-  const maxPer=Math.max(...CASE_CAPS.map(c=>c.per));
-  caseCapBody.innerHTML=CASE_CAPS.map(c=>'<tr><td>'+c.n+'</td><td class="muted">'+c.o+'</td><td class="num">'+c.t+'</td><td class="num">'+c.c+'</td><td class="num">'+c.a+'</td><td class="num">'+c.h+'</td><td class="num">¥'+c.cost+'</td><td><div class="cbar"><i class="'+(c.hot?'hot':'')+'" style="width:'+(c.per/maxPer*100).toFixed(1)+'%"></i></div></td></tr>').join('');
-}
-(function drawCaseCurve(){
-  const svg=document.getElementById('caseCurve'); if(!svg)return;
-  const W=520,H=230,L=44,R=14,T=12,B=32;
-  const x=c=>L+(c/100)*(W-L-R), y=a=>H-B-((a-40)/60)*(H-T-B); let s='';
-  [40,60,80,100].forEach(a=>{ s+='<line x1="'+L+'" y1="'+y(a)+'" x2="'+(W-R)+'" y2="'+y(a)+'" stroke="#f0f0f6"/>'; s+='<text x="'+(L-8)+'" y="'+(y(a)+4)+'" text-anchor="end" font-size="10" fill="#a1a1aa">'+a+'%</text>'; });
-  [0,25,50,75,100].forEach(c=>{ s+='<text x="'+x(c)+'" y="'+(H-B+16)+'" text-anchor="middle" font-size="10" fill="#a1a1aa">'+c+'%</text>'; });
-  s+='<line x1="'+L+'" y1="'+(H-B)+'" x2="'+(W-R)+'" y2="'+(H-B)+'" stroke="#d9d9e6"/>';
-  s+='<line x1="'+L+'" y1="'+T+'" x2="'+L+'" y2="'+(H-B)+'" stroke="#d9d9e6"/>';
-  s+='<text x="'+(W/2)+'" y="'+(H-4)+'" text-anchor="middle" font-size="10" fill="#a1a1aa">覆盖率（返回结果的比例）</text>';
-  s+='<text x="12" y="'+(T+6)+'" font-size="10" fill="#a1a1aa">准确率</text>';
-  const c1='M'+[[0,99],[20,98],[40,95],[50,92],[60,86],[75,72]].map(p=>x(p[0])+','+y(p[1])).join(' L');
-  const c2='M'+[[0,97],[25,95],[50,92],[70,90],[85,88],[95,80]].map(p=>x(p[0])+','+y(p[1])).join(' L');
-  s+='<path d="'+c1+'" fill="none" stroke="#b9c4d2" stroke-width="2"/>';
-  s+='<path d="'+c2+'" fill="none" stroke="#4338ca" stroke-width="2.2"/>';
-  s+='<circle cx="'+x(50)+'" cy="'+y(92)+'" r="4.5" fill="#c0563f"/>';
-  s+='<circle cx="'+x(85)+'" cy="'+y(88)+'" r="4.5" fill="#4338ca"/>';
-  s+='<text x="'+(x(50)+8)+'" y="'+(y(92)-7)+'" font-size="10.5" fill="#c0563f">现状 50% / 92%</text>';
-  s+='<text x="'+(x(85)-8)+'" y="'+(y(88)-9)+'" font-size="10.5" fill="#4338ca" text-anchor="end">分层 85% / 88%</text>';
-  svg.innerHTML=s;
-})();
+const nodeGrid = document.querySelector('[data-node-grid]');
+if (nodeGrid) nodeGrid.addEventListener('click', e => {
+  const el = e.target.closest('[data-node]');
+  if (el) renderNode(el.dataset.node);
+});
+
+const capBody = document.querySelector('[data-cap-rows]');
+if (capBody) capBody.innerHTML = CAP_ROWS.map(r => `<tr><td>${r.n}</td><td class="muted">${r.o}</td><td class="num">${r.t}</td><td class="num">${r.c}</td><td class="num">${r.a}</td><td class="num">${r.h}</td><td class="num">${r.cost}</td><td><div class="cbar"><i class="${r.hot}" style="width:${r.w}"></i></div></td></tr>`).join('');
+
+selectCase('workflow');
+renderNode('fit');
 </script>
 </body>
 </html>
