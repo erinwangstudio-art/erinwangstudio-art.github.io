@@ -181,7 +181,7 @@ table.ccap td.muted{color:#6b6b76;font-size:11px}
         </ul>
       </div>
       <div class="stage">
-        <div data-case-panel="workflow" style="display:block">
+        <div data-case-panel="workflow" id="workflow" style="display:block">
         <div class="panel">
             
             <div class="ptop"><h3>AI 工作流引擎与编排平台</h3><span class="meta">2025 – 至今</span></div>
@@ -193,7 +193,7 @@ table.ccap td.muted{color:#6b6b76;font-size:11px}
             <div class="image-stack"><img class="stack-over" src="assets/workflow-detail.png" alt="工作流链路补充图" style="width: 429px; height: 243px; left: 332px; top: 174px; object-fit: cover; object-position: 100% 49.351%; object-view-box: inset(10.1694% 0% 10.4369% 28.9946%)"><img class="stack-main" src="assets/workflow-sample.png" alt="AI 工作流示例" style="object-fit: cover; object-position: 50% 27.102%"></div>
         </div>
         </div>
-        <div data-case-panel="editor" style="display:none">
+        <div data-case-panel="editor" id="editor" style="display:none">
         <div class="panel">
             
             <div class="ptop"><h3>可视化编辑器</h3><span class="meta">2024.05 – 2025.03</span></div>
@@ -205,7 +205,7 @@ table.ccap td.muted{color:#6b6b76;font-size:11px}
             
           </div>
         </div>
-        <div data-case-panel="practice" style="display:none">
+        <div data-case-panel="practice" id="practice" style="display:none">
         <div class="panel">
             <div class="ptop"><h3>个人AI实践</h3><span class="meta">开源 · 个人项目</span></div>
             <p class="desc" style="font-size: 15.5px; color: #111114; text-align: left; height: 100%; width: 100%; max-width: none"><span style="color: rgb(107, 107, 118); font-size: 14px; background-color: rgb(255, 255, 255)">把 AI 变成自己的日常工具：基于DSH插件生态，搭建个人工作AI相关基础工具。&nbsp;把需求生成可编辑画布原型；改造并开源 DSH 插件，沉淀 Agent 工作流与产品化实践。</span></p>
@@ -225,8 +225,8 @@ table.ccap td.muted{color:#6b6b76;font-size:11px}
         <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M8 13h8M8 17h8"></path></svg><b>背景</b><span>Temu POD业务，商品生产与上架链路传统方式依赖运营个人经验，跟进竞品/热门商品，采集原素材，进行素材加工后规避平台风险，最终录入商品数据平台上架；涉及采集、清洗、图像处理、风险识别和上架等多个环节。</span></div>
         <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg><b>核心问题</b><span>依赖个人经验、处理工具分散、难以沉淀经验工团队使用，人工处理成为规模化扩张的瓶颈。</span></div>
         <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"></path><path d="m3 12 9 5 9-5"></path><path d="m3 17 9 5 9-5"></path></svg><b>解决方式</b><span>定义原子能力与工作流模板，引入「人工审核 + AI 执行」混合机制，并通过浏览器采集插件统一数据入口。</span></div>
-        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><b>我的作用</b><span>主导定义原子能力、工作流编排与人机协同机制；<span class="todo">[请补充：正式角色、团队规模、负责边界]</span></span></div>
-        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2"></circle><circle cx="19" cy="6" r="2"></circle><circle cx="12" cy="18" r="2"></circle><path d="M6.7 7.2 10.8 16M17.3 7.2 13.2 16M7 6h10"></path></svg><b>推进过程</b><span>梳理链路 → 拆分能力节点 → 定义输入输出契约 / 阈值 / 失败降级 → 协同工程实现 → 用覆盖率、成本与人工复核口径评测迭代；<span class="todo">[请补充：关键调研对象、上线节奏、你做的关键决策]</span></span></div>
+        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><b>我的作用</b><span>主导定义原子能力、工作流编排与人机协同机制；</span></div>
+        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2"></circle><circle cx="19" cy="6" r="2"></circle><circle cx="12" cy="18" r="2"></circle><path d="M6.7 7.2 10.8 16M17.3 7.2 13.2 16M7 6h10"></path></svg><b>推进过程</b><span>梳理链路 → 拆分能力节点 → 定义输入输出契约 / 阈值 / 失败降级 → 协同工程实现 → 用覆盖率、成本与人工复核口径评测迭代</span></div>
       </div>
       
       
@@ -256,8 +256,8 @@ table.ccap td.muted{color:#6b6b76;font-size:11px}
         <div class="story-row"><b>背景</b><span>全球独立站商家需要低成本搭建站点与多市场装修，主题开发依赖代码，复用与交付效率受限。</span></div>
         <div class="story-row"><b>核心问题</b><span>页面组件不标准、布局扩展能力有限、多市场配置重复，主题供给与开发者生态需要规模化机制。</span></div>
         <div class="story-row"><b>解决方式</b><span>把页面组件原子级拆解与标准化，扩展 Flexbox 布局模型；用「基础配置 + 单市场差异化配置」支持全球化运营，并搭建主题商城生态。</span></div>
-        <div class="story-row"><b>我的作用</b><span>围绕组件模型、装修交互与配置体系做产品方案设计；<span class="todo">[请补充：正式角色、主导模块、协作对象]</span></span></div>
-        <div class="story-row"><b>推进过程</b><span>梳理页面组件 → 抽象基础组件库 → 设计配置层级与多市场规则 → 协同设计 / 前端 / KA 商家验证 → 建立主题商城接入流程；<span class="todo">[请补充：具体调研、评审、灰度或上线动作]</span></span></div>
+        <div class="story-row"><b>我的作用</b><span>围绕组件模型、装修交互与配置体系做产品方案设计；</span></div>
+        <div class="story-row"><b>推进过程</b><span>梳理页面组件 → 抽象基础组件库 → 设计配置层级与多市场规则 → 协同设计 / 前端 / KA 商家验证 → 建立主题商城接入流程</span></div>
       </div>
       <div class="editor-grid">
         <div class="ecard"><h4>主题架构升级</h4><p>页面组件原子级拆解与标准化，构建基础组件库与可复用组件体系；基于 Flexbox 扩展布局模型。</p></div>
@@ -279,7 +279,7 @@ table.ccap td.muted{color:#6b6b76;font-size:11px}
           <div class="story-row"><b>背景</b><span>基于开源编辑器项目，增加针对PM日常工作相关功能；</span></div>
           <div class="story-row"><b>核心问题</b><span>便于快速修改，与Agent协同修改，涉及页面交互展开便于评审使用</span></div>
           <div class="story-row"><b>解决方式</b><span>定义需求输入与画布元素映射，用 DSH 生成可继续修改的画布原型。</span></div>
-          <div class="story-row"><b>我的作用</b><span>独立完成需求定义、产品原型与交互设计；<span class="todo">[请补充：是否独立开发、具体技术角色、版本贡献]</span></span></div>
+          <div class="story-row"><b>我的作用</b><span>独立完成需求定义、产品原型与交互设计</span></div>
           <div class="story-row"><b>推进过程</b><span>已有开源项目体验：open design, huashu skill, 定义需求输入 → 设计画布元素映射 → 验证可编辑性 → 开源案例；<span class="todo">[请补充：关键迭代、用户反馈或发布节点]</span></span></div>
         </div>
         <div class="editor-grid" style="grid-template-columns:1fr">
@@ -332,12 +332,17 @@ const CAP_ROWS = [
 const CFG = {}; CASE_NODES.forEach(n => { CFG[n.id] = n; });
 let selectedNode = 'fit';
 
-function selectCase(id) {
+function selectCase(id, updateHash = false) {
   document.querySelectorAll('[data-case-panel]').forEach(el => { el.style.display = el.dataset.casePanel === id ? '' : 'none'; });
   document.querySelectorAll('[data-deep-case]').forEach(el => { el.style.display = el.dataset.deepCase === id ? '' : 'none'; });
   document.querySelectorAll('[data-p]').forEach(el => { el.classList.toggle('on', el.dataset.p === id); });
+  if (updateHash && history.replaceState) history.replaceState(null, '', '#' + id);
 }
-document.querySelectorAll('[data-p]').forEach(el => el.addEventListener('click', () => selectCase(el.dataset.p)));
+document.querySelectorAll('[data-p]').forEach(el => el.addEventListener('click', () => selectCase(el.dataset.p, true)));
+window.addEventListener('hashchange', () => {
+  const id = (location.hash || '').replace('#', '');
+  if (['workflow','editor','practice'].includes(id)) selectCase(id);
+});
 
 document.querySelectorAll('[data-ct]').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -364,7 +369,8 @@ if (nodeGrid) nodeGrid.addEventListener('click', e => {
 const capBody = document.querySelector('[data-cap-rows]');
 if (capBody) capBody.innerHTML = CAP_ROWS.map(r => `<tr><td>${r.n}</td><td class="muted">${r.o}</td><td class="num">${r.t}</td><td class="num">${r.c}</td><td class="num">${r.a}</td><td class="num">${r.h}</td><td class="num">${r.cost}</td><td><div class="cbar"><i class="${r.hot}" style="width:${r.w}"></i></div></td></tr>`).join('');
 
-selectCase('workflow');
+const initialCase = (location.hash || '').replace('#', '');
+selectCase(['workflow','editor','practice'].includes(initialCase) ? initialCase : 'workflow');
 renderNode('fit');
 </script>
 </body>
