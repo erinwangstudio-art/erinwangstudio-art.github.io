@@ -147,6 +147,11 @@ table.ccap td.muted{color:#6b6b76;font-size:11px}
 .ch3{font-size:12px;color:#6b6b76;letter-spacing:.5px;margin:0 0 12px}
 .foot{border-top:1px solid #e6e6ec;margin-top:30px;padding:22px 0 50px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#6b6b76}
 @media(max-width:980px){.case-grid{grid-template-columns:1fr}.cbuilder,.ceval,.editor-grid{grid-template-columns:1fr}}
+@media(max-width:640px){
+ .hpnav{padding:12px 18px;gap:10px;flex-wrap:wrap;position:static}.hlogo{font-size:15px;white-space:nowrap}.hnav{order:3;width:100%;justify-content:space-between;gap:12px}.hnav a{padding:8px 0}.hpill{margin-left:auto;white-space:nowrap}.hpwrap{padding:0 18px}
+ .casebar{position:static;align-items:flex-start;gap:10px}.ctabs-mini{width:100%;display:flex;overflow-x:auto;flex-wrap:nowrap!important;padding-bottom:4px}.ctab-mini{white-space:nowrap;min-height:40px}.case-grid{gap:20px;padding:24px 0}.idx ul{display:flex;overflow-x:auto;gap:8px}.idx li{flex:0 0 180px;padding:10px;border:1px solid #e6e6ec;border-radius:8px}.idx .t{font-size:15px}.stage{min-width:0;min-height:0}.panel h3{font-size:24px}.panel .ptop{gap:8px}.panel .desc{height:auto!important;overflow-wrap:anywhere}.panel .cover-img{width:100%!important;height:auto!important;aspect-ratio:16/9}.image-stack{padding-bottom:0}.image-stack .stack-main,.image-stack .stack-over{position:static;width:100%!important;height:auto!important;aspect-ratio:16/9;object-fit:cover}.image-stack .stack-over{margin-top:10px;order:2}.metrics{gap:14px}
+ .case{padding:36px 0 10px}.case .chead{flex-wrap:wrap;gap:10px}.case h2{font-size:24px}.ctabs{gap:0}.ctab{padding:10px 8px;font-size:12px}.cbuilder{grid-template-columns:1fr}.cgrid3{grid-template-columns:1fr;gap:10px}.ccanvas{min-height:0}.cnode .cost{position:static;text-align:right;margin-top:4px}.ctablewrap{max-width:100%;overflow-x:auto}.project-block .subhead{flex-wrap:wrap}.project-pair,.editor-grid{grid-template-columns:1fr!important}.story{padding:16px}.story-row{overflow-wrap:anywhere}.cnote{white-space:normal}
+}
 </style>
 </head>
 <body>
@@ -280,7 +285,7 @@ table.ccap td.muted{color:#6b6b76;font-size:11px}
           <div class="story-row"><b>核心问题</b><span>便于快速修改，与Agent协同修改，涉及页面交互展开便于评审使用</span></div>
           <div class="story-row"><b>解决方式</b><span>定义需求输入与画布元素映射，用 DSH 生成可继续修改的画布原型。</span></div>
           <div class="story-row"><b>我的作用</b><span>独立完成需求定义、产品原型与交互设计</span></div>
-          <div class="story-row"><b>推进过程</b><span>已有开源项目体验：open design, huashu skill, 定义需求输入 → 设计画布元素映射 → 验证可编辑性 → 开源案例；<span class="todo">[请补充：关键迭代、用户反馈或发布节点]</span></span></div>
+          <div class="story-row"><b>推进过程</b><span>已有开源项目体验：open design, huashu skill, 定义需求输入 → 设计画布元素映射 → 验证可编辑性 → 开源案例</span></div>
         </div>
         <div class="editor-grid" style="grid-template-columns:1fr">
           <div class="ecard"><h4>案例结果</h4><p>用 DSH 把产品需求直接生成为可视化“画布”原型，缩短方案验证周期。案例开源：github.com/erinwangstudio-art/yayidesign。</p></div>

@@ -111,7 +111,8 @@ a{color:inherit;text-decoration:none}
 .mini-link{display:inline-flex;margin-top:10px;font-size:12px;color:#4338ca;font-weight:600;border-bottom:1px solid #4338ca;padding-bottom:2px}
 .qr-button-wrap{position:relative;display:inline-block;margin-top:10px}
 .mini-link.qr-button{border:0;border-bottom:1px solid #4338ca;background:transparent;padding-bottom:2px;cursor:pointer;margin-top:0}
-.mini-qr-pop{position:absolute;left:0;bottom:26px;width:150px;background:#fff;border:1px solid #e6e6ec;border-radius:10px;box-shadow:0 10px 24px rgba(17,17,20,.14);padding:10px;display:flex;flex-direction:column;align-items:center;gap:4px;z-index:30}
+.mini-qr-pop{position:absolute;left:0;bottom:26px;width:150px;background:#fff;border:1px solid #e6e6ec;border-radius:10px;box-shadow:0 10px 24px rgba(17,17,20,.14);padding:10px;display:none;flex-direction:column;align-items:center;gap:4px;z-index:30}
+.qr-button-wrap:hover .mini-qr-pop,.qr-button-wrap:focus-within .mini-qr-pop{display:flex}
 .hero{display:grid;grid-template-columns:1.35fr .65fr;gap:48px;align-items:end;padding:54px 0 40px;border-bottom:1px solid #e6e6ec}
 .hero h1{font-size:50px;line-height:1.2;font-weight:800;margin:0;letter-spacing:1px}
 .hero h1 i{font-style:italic;color:#4338ca}
@@ -169,6 +170,11 @@ a{color:inherit;text-decoration:none}
 .aboutline{font-size:14.5px;color:#6b6b76;max-width:720px}
 .foot{border-top:1px solid #e6e6ec;margin-top:30px;padding:22px 0 50px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#6b6b76}
 @media(max-width:980px){.hero{grid-template-columns:1fr;gap:18px}.feature-grid,.strip{grid-template-columns:1fr}.hp h1{font-size:38px}.feature.split,.feature.split.reverse{grid-template-columns:1fr}.feature.split .cover-img,.feature.split.reverse .cover-img{order:1}.feature.split .feature-body,.feature.split.reverse .feature-body{order:2}}
+@media(max-width:640px){
+ .hpnav{padding:12px 18px;gap:10px;flex-wrap:wrap}.hlogo{font-size:15px;white-space:nowrap}.hnav{order:3;width:100%;justify-content:space-between;gap:12px}.hnav a{padding:8px 0}.hpill{margin-left:auto;white-space:nowrap}
+ .hpwrap{padding:0 18px}.hero{padding:34px 0 28px;gap:24px}.hero>div,.hero h1,.hero-overview{width:100%!important;max-width:100%}.hero h1{font-size:clamp(29px,8vw,38px)!important;line-height:1.3;overflow-wrap:anywhere}.hero-overview{padding:18px}
+ .section,.projects-section{padding:36px 0}.sec-head h2{font-size:26px}.feature{padding:18px;gap:18px}.feature.split,.feature.split.reverse{gap:20px}.feature.split .cover-img{width:100%!important;height:auto!important;min-height:0;aspect-ratio:16/9}.feature-body{gap:12px}.metrics{gap:16px}.strip{gap:16px;margin-top:20px}.strip .mini{height:auto!important;padding:18px}.phone-row{height:auto;gap:6px}.phone-shot{width:calc((100% - 12px)/3)!important;height:auto!important;aspect-ratio:97/217;object-fit:cover}.thumb-img{max-width:100%}.bottom-band{padding:40px 18px}.bottom-contact{padding:18px}.dc-row{flex-wrap:wrap;overflow-wrap:anywhere}.dc-row a{min-width:0;overflow-wrap:anywhere}
+}
 </style>
 </head>
 <body>
@@ -190,7 +196,7 @@ a{color:inherit;text-decoration:none}
       <div style="width: 554px">
         <h1 style="width: 602px; font-style: normal; color: #111114; font-size: 50px">把繁琐的业务问题，<br>拆成结构化的平台能力。</h1>
         
-        <a class="hero-cta" href="#core">看核心项目 →</a>
+        <a class="hero-cta" href="cases.html">看核心项目 →</a>
         
       </div>
       <aside class="hero-overview" style="width: 336px">
@@ -240,7 +246,7 @@ a{color:inherit;text-decoration:none}
           <div class="phone-row"><img class="phone-shot" src="assets/mini-1.png" alt="个人小程序截图 1" style="width: 97px; height: 217px"><img class="phone-shot" src="assets/mini-2.png" alt="个人小程序截图 2" style="width: 97px; height: 217px"><img class="phone-shot" src="assets/mini-3.png" alt="个人小程序截图 3" style="width: 97px; height: 217px"></div>
           <b>个人小程序 · 累计用户 100w+</b>
           <p>工具类小程序，已验证到百万级用户规模。</p>
-          <div class="qr-button-wrap"><button class="mini-link qr-button" type="button" data-qr-toggle>扫码查看 ↗</button><div class="mini-qr-pop" data-qr-pop hidden><img class="mini-program-qr" src="assets/mini-program-qr.png" alt="摸鱼侠小程序二维码"><span>扫码查看小程序</span></div></div>
+          <div class="qr-button-wrap"><button class="mini-link qr-button" type="button">扫码查看 ↗</button><div class="mini-qr-pop"><img class="mini-program-qr" src="assets/mini-program-qr.png" alt="摸鱼侠小程序二维码"><span>扫码查看小程序</span></div></div>
         </div><div class="mini" style="background-color: #ffffff">
           
           <img class="thumb-img" src="assets/ai-canvas-sample.png" alt="AI 画布原型示例">
@@ -281,12 +287,18 @@ a{color:inherit;text-decoration:none}
   </div>
 </div>
 <script>
-document.querySelectorAll('[data-qr-toggle]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const pop = btn.parentElement.querySelector('[data-qr-pop]');
-    if (pop) pop.hidden = !pop.hidden;
+const qrButton = document.querySelector('.qr-button');
+if (qrButton) {
+  qrButton.addEventListener('click', () => {
+    if (!window.matchMedia('(hover: none)').matches) return;
+    const wrap = qrButton.closest('.qr-button-wrap');
+    if (wrap.classList.contains('touch-open')) { wrap.classList.remove('touch-open'); qrButton.blur(); }
+    else { wrap.classList.add('touch-open'); }
   });
-});
+  document.addEventListener('pointerdown', e => {
+    if (!e.target.closest('.qr-button-wrap')) { qrButton.closest('.qr-button-wrap').classList.remove('touch-open'); qrButton.blur(); }
+  });
+}
 </script>
 </body>
 </html>
