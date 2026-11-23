@@ -339,10 +339,12 @@ function selectCase(id, updateHash = false) {
   if (updateHash && history.replaceState) history.replaceState(null, '', '#' + id);
 }
 document.querySelectorAll('[data-p]').forEach(el => el.addEventListener('click', () => selectCase(el.dataset.p, true)));
-window.addEventListener('hashchange', () => {
-  const id = (location.hash || '').replace('#', '');
-  if (['workflow','editor','practice'].includes(id)) selectCase(id);
-});
+function caseFromHash() {
+  const raw = (location.hash || '').replace('#', '');
+  const id = raw.split('?')[0].split('&')[0];
+  return ['workflow','editor','practice'].includes(id) ? id : 'workflow';
+}
+window.addEventListener('hashchange', () => selectCase(caseFromHash()));
 
 document.querySelectorAll('[data-ct]').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -369,8 +371,7 @@ if (nodeGrid) nodeGrid.addEventListener('click', e => {
 const capBody = document.querySelector('[data-cap-rows]');
 if (capBody) capBody.innerHTML = CAP_ROWS.map(r => `<tr><td>${r.n}</td><td class="muted">${r.o}</td><td class="num">${r.t}</td><td class="num">${r.c}</td><td class="num">${r.a}</td><td class="num">${r.h}</td><td class="num">${r.cost}</td><td><div class="cbar"><i class="${r.hot}" style="width:${r.w}"></i></div></td></tr>`).join('');
 
-const initialCase = (location.hash || '').replace('#', '');
-selectCase(['workflow','editor','practice'].includes(initialCase) ? initialCase : 'workflow');
+selectCase(caseFromHash());
 renderNode('fit');
 </script>
 </body>
