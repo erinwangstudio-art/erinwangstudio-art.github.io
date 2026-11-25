@@ -40,14 +40,14 @@ a{color:inherit;text-decoration:none}
 .jump .jn{font-family:var(--mono);font-size:11px;color:var(--at);letter-spacing:1px}
 .jump h4{margin:8px 0 6px;font-size:15px;font-weight:500;color:#fff}
 .jump p{margin:0;font-size:12px;line-height:1.7;color:var(--d3)}
-.subnav{display:block;position:sticky;top:0;z-index:50;background:rgba(247,247,244,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.subnav{display:none;position:sticky;top:0;z-index:50;background:rgba(247,247,244,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .subnav.show{display:block}
 .subin{display:flex;align-items:center;justify-content:space-between;gap:16px;height:54px}
 .subin nav{display:flex;gap:24px;font-size:12.5px;color:var(--t2)}
 .subin nav a:hover{color:var(--ad)}
 .subin nav a.on{color:var(--ad);font-weight:600;border-bottom:2px solid var(--ad);padding-bottom:4px}
 .brail{font-family:var(--mono);font-size:11.5px;color:var(--t3)}
-.case{padding:72px 0 56px;border-top:1px solid var(--line);scroll-margin-top:54px}
+.case{padding:64px 0 56px;border-top:1px solid var(--line);scroll-margin-top:54px}
 .case:first-of-type{border-top:0}
 .cid{font-family:var(--mono);font-size:11px;letter-spacing:1.6px;color:var(--ad)}
 .chead h2{margin:10px 0 10px;font-size:34px;line-height:1.3;letter-spacing:-.8px;font-weight:500}
@@ -60,7 +60,7 @@ a{color:inherit;text-decoration:none}
 .vkpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:24px;padding-top:20px;border-top:1px solid var(--lined)}
 .vkpis b{display:block;font-family:var(--mono);font-size:21px;color:#fff;font-variant-numeric:tabular-nums;line-height:1.3}
 .vkpis span{font-size:11px;color:var(--d3);display:block;margin-top:2px}
-.s{display:flex;align-items:baseline;gap:14px;margin:44px 0 16px;flex-wrap:wrap}
+.s{display:flex;align-items:baseline;gap:14px;margin:36px 0 16px;flex-wrap:wrap}
 .s .sn{font-family:var(--mono);font-size:11px;color:var(--ad);letter-spacing:1px;flex:none}
 .s h3{font-size:18px;font-weight:500;margin:0;letter-spacing:-.2px}
 .s .sd{font-size:12.5px;color:var(--t3)}
@@ -112,6 +112,7 @@ td.muted{color:var(--t3)}
 .ec{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}
 .ec h4{margin:0 0 8px;font-size:14.5px;font-weight:500}
 .ec p{margin:0;font-size:12.5px;line-height:1.85;color:var(--t2)}
+.ec .eshot{width:100%;aspect-ratio:509/250;object-fit:cover;display:block;border:1px solid var(--line);border-radius:9px;margin-bottom:14px;background:#fff}
 .shot{width:100%;border-radius:12px;display:block;border:1px solid var(--line);object-fit:cover}
 .pblock{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;margin-top:16px}
 .pblock .ph{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:12px}
@@ -165,7 +166,7 @@ td.muted{color:var(--t3)}
     <section class="hhero wrap">
       <p class="kick">SELECTED WORK · 3 CASES · 2022–2026</p>
       <h1></h1><h1 style="font-size: 44px; letter-spacing: -0.8px; margin: 0px 0px 16px; font-weight: 700">持续学习·沉淀AI native的工作方式和平台能力</h1>
-      <p class="lead"><span style="color: rgb(117, 117, 111); font-family: ui-monospace, &quot;SF Mono&quot;, SFMono-Regular, Menlo, monospace; font-size: 12.5px">3 个核心案例 · 点击切换查看设计决策详情</span></p>
+      <p class="lead"><span style="color: rgb(117, 117, 111); font-family: ui-monospace, &quot;SF Mono&quot;, SFMono-Regular, Menlo, monospace; font-size: 12.5px">点击切换查看项目详情</span></p>
       <div class="jumps">
         <a class="jump" href="#workflow">
           <span class="jn">CASE 01</span>
@@ -179,8 +180,8 @@ td.muted{color:var(--t3)}
         </a>
         <a class="jump" href="#practice">
           <span class="jn">CASE 03</span>
-          <h4>个人 AI 实践</h4>
-          <p>100w+ 用户工具、画布工作流、已上架插件</p>
+          <h4>Yayi Design · 个人设计工作台</h4>
+          <p>入口 → 工作台 → 对话与画板联动</p>
         </a>
       </div>
     </section>
@@ -191,14 +192,14 @@ td.muted{color:var(--t3)}
       <nav>
         <a href="#workflow">01 工作流引擎</a>
         <a href="#editor">02 可视化编辑器</a>
-        <a href="#practice">03 个人 AI 实践</a>
+        <a href="#practice">03 Yayi Design</a>
       </nav>
       <a class="brail" href="#top">↑ 回到顶部</a>
     </div>
   </div>
 
   <section class="case" id="workflow">
-    <div class="wrap" style="position: relative">
+    <div class="wrap">
       <div class="chead">
         <p class="cid">CASE 01</p>
         <h2>AI 工作流引擎与编排平台</h2>
@@ -257,37 +258,6 @@ td.muted{color:var(--t3)}
           </div>
         </div>
 
-      </div>
-
-      <div class="s"><span class="sn">04</span><h3>能力数据看板</h3><span class="sd"><br></span></div>
-      <div class="tbl">
-        <table>
-          <thead><tr><th>能力</th><th>产出物</th><th class="num">任务量</th><th class="num">准确率</th><th class="num">人工复核</th><th class="num">响应时间</th><th class="num">单次成本</th></tr></thead>
-          <tbody>
-            <tr><td class="name">图片质量检测</td><td class="muted">pass / fail + 原因码</td><td class="num">约 4 万</td><td class="num">90%+</td><td class="num">不需要</td><td class="num">1s</td><td class="num">&lt; ¥0.01</td></tr>
-            <tr><td class="name">底衫版型检测</td><td class="muted">四维标签 + 匹配Top版型</td><td class="num">约 3–4 万</td><td class="num">90%+</td><td class="num">20%</td><td class="num">5s</td><td class="num">约 ¥0.03</td></tr>
-            <tr><td class="name">logo 提取</td><td class="muted">透明底图案</td><td class="num">约数千</td><td class="num">—</td><td class="num">不需要</td><td class="num">45s</td><td class="num">约 ¥0.2</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="notes">仅展示部分节点租户日均数据示例。任务量和金额按量级脱敏</p>
-
-
-
-
-
-      <div class="s"><span class="sn">05</span><h3>复盘反思</h3></div>
-      <div class="boxtwo">
-        <div class="bx">
-          <h4>可优化点</h4>
-          <p>数据采集依赖爬虫，受平台风控影响。<br>人工介入触发时机没有明确规则，飞书/企微只能被动兜底。<br>节点存在前后依赖，模板还不能自由拆装。</p>
-
-        </div>
-        <div class="bx">
-          <h4>如果重来</h4>
-          <p>封装成独立应用，有系统级消息通知，部分小模型可以在本地运行；<br>应用内调用浏览器进行数据采集自动化<br>模块化拆装更灵活接入上下游</p>
-
-        </div>
       </div>
     </div>
   </section>
@@ -353,23 +323,6 @@ td.muted{color:var(--t3)}
           <p>0→1 搭建主题商城，建立第三方开发者入驻、审核、发布与运营流程，把主题从「项目交付」变成「商品供给」。</p>
         </div>
       </div>
-
-
-
-
-
-      <div class="s"><span class="sn">04</span><h3>边界与反思</h3></div>
-      <div class="boxtwo">
-        <div class="bx">
-          <h4>可优化点</h4>
-          <p>灵活度提升在操作的理解上增加了难度，通过AI助手进行了部分缓解，但依旧不够直观<br></p>
-
-        </div>
-        <div class="bx">
-          <h4>如果重来</h4>
-          <p>对编辑器进行更深的改造，与AI的结合更前置</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -377,83 +330,41 @@ td.muted{color:var(--t3)}
     <div class="wrap">
       <div class="chead">
         <p class="cid">CASE 03</p>
-        <h2>个人 AI 实践</h2>
-        <p class="cmeta"><b>2023 至今</b> · 独立完成 · <b>定义 / 交互 / 开发</b></p>
+        <h2>Yayi Design｜从入口到交付的设计工作台</h2>
+        <p class="cmeta"><b>个人持续实践</b> · 独立完成 · <b>定义 / 交互 / 开发</b></p>
       </div>
 
       <div class="verdict">
         <p class="vk">结论</p>
-        <p class="vt">把 AI 从「会用」推到「做成产品」：一个 <b>100w+ 用户</b>的工具、一个「需求 → 可编辑画布」的工作流、一个已上架插件市场的 DSH 插件。三个都不是 demo，都在被真实使用。</p>
+        <p class="vt">把散在目录里的画布、规范、组件与对话，收进一个从入口到交付的设计工作台。<b>固定入口 → 本地工作台 → 对话与画板联动</b>，让高频设计任务有统一入口，也让 AI 修改和开发说明各归其位。</p>
         <div class="vkpis">
-          <div><b>100w+</b><span>小程序累计用户</span></div>
-          <div><b>2</b><span>开源项目</span></div>
-          <div><b>1</b><span>已上架插件市场</span></div>
-          <div><b>1 轮</b><span>评审环节前置</span></div>
+
+
+
+
         </div>
       </div>
 
       <div class="s"><span class="sn">01</span><h3>背景与问题</h3></div>
       <details class="bg">
-        <summary>想让 AI 落在真实交付里，而不是停在聊天框里试用</summary>
+        <summary>个人项目越做越多，真正难的不是生成一个页面，而是让入口、项目、规范、组件和对话保持一致</summary>
         <div class="inner">
-          <p>AI能从无到有出一个差不多的页面，细节需要介入去调整，除claude以外其他agent都不提供比较灵活的编辑器能力；在细节调整上通过对话反反复复，效率一般。没有版本管理，改坏了想回上一版也需要花token。</p>
+          <p>项目散落在不同目录，找项目靠记忆；设计规范、组件清单和编辑器各自维护，看到的组件和实际能取的组件会脱节；同一个需求要在对话里反复描述；AI 修改指令与开发注意事项混在一起，后续维护分不清哪些是任务、哪些是长期说明。此前做过的 100w+ 用户小程序、可编辑画布和 dsh-trafficlight，都是为了验证「个人想法能走到真实使用」，也都暴露了这些协作成本。</p>
         </div>
       </details>
 
-      <div class="s"><span class="sn">02</span><h3>我的判断</h3></div>
-      <div class="jgrid">
-        <div class="jcard">
-          <p class="jq">画布只做「需求 → 可编辑结构」这一段</p>
-          <p class="jw">不做通用设计工具。边界窄，才做得完；做得完，才有人用。</p>
-          <p class="jc"><b>代价：</b>复杂视觉稿仍要回 Figma，工具只在「结构讨论」这一段成立。</p>
-        </div>
-        <div class="jcard">
-          <p class="jq">插件先补场景，再谈交互</p>
-          <p class="jw">红黄绿灯不是我拍脑袋想的：并排跑五个会话时，我需要一眼知道哪个卡住了。先把场景说清楚，交互自然就出来了。</p>
-          <p class="jc"><b>代价：</b>只解决「感知」，不解决「调度」，任务还是得自己排。</p>
-        </div>
-        <div class="jcard">
-          <p class="jq">小程序一个人做完整个链路</p>
-          <p class="jw">需求、交互、开发、冷启动全部自己走一遍，是为了验证「一个想法最短多久能被真实用户使用」。</p>
-          <p class="jc"><b>代价：</b>没有团队协作和运营资源，增长基本靠自然流量。</p>
-        </div>
-      </div>
-
-      <div class="s"><span class="sn">03</span><h3>方案</h3></div>
-      <img class="shot" src="assets/32869281cb17da83e20659aef21df35e.png" alt="需求生成可编辑画布">
+      <div class="s"><span class="sn">03</span><h3>方案：从入口到交付</h3></div>
       <div class="pblock">
-        <div class="ph"><h4>需求 → 可编辑画布</h4><span class="pl">github.com/erinwangstudio-art/yayidesign</span></div>
-        <p>定义需求输入与画布元素的映射关系，让生成的画布可以继续被修改，而不是一张截图。核心不是「生成得像」，是「生成完还能改」—— 不能改的产物在评审里没有价值。</p>
+        <div class="ph"><h4>固定入口 → 本地工作台 → 对话与画板联动</h4><span class="pl">ENTRY → WORKBENCH → COLLABORATION</span></div>
+        <p>左侧导航固定入口，直接进入工作台；工作台集中管理项目、规范、组件和快捷指令；打开项目后，对话与画板并排，修改在对话里发起，结果在画板里即时呈现。</p>
       </div>
-      <div class="pblock">
-        <div class="ph"><h4>dsh-trafficlight</h4><span class="pl">已上架 DSH 插件市场</span></div>
-        <p>把重点关注会话的状态映射为红 / 黄 / 绿灯，提供 macOS 悬浮窗常驻提醒与可停靠侧栏，点击直达对应会话。改造自开源插件，补的是「并行任务管理」这个缺口。</p>
-      </div>
-      <div class="pblock">
-        <div class="ph"><h4>工具类小程序</h4><span class="pl">累计用户 100w+</span></div>
-        <p>一个人做完需求、交互、开发和冷启动，验证了「需求 → 上线 → 有人用」的完整链路。这一段经历的价值不在用户数，而在于我知道每一步真实的成本在哪。</p>
-      </div>
-
-      <div class="s"><span class="sn">04</span><h3>结果与口径</h3></div>
-      <div class="rgrid">
-        <div><b>100w+</b><span>小程序累计用户</span></div>
-        <div><b>已上架</b><span>DSH 插件市场</span></div>
-        <div><b>2</b><span>开源仓库</span></div>
-        <div><b>分钟级</b><span>从需求到可点原型</span></div>
-      </div>
-      <p class="notes">口径：用户数为小程序后台累计去重；「分钟级」是个人使用场景下的观察，非压测结论。</p>
-
-      <div class="s"><span class="sn">05</span><h3>边界与反思</h3></div>
-      <div class="boxtwo">
-        <div class="bx">
-          <h4>没做好的</h4>
-          <p>画布的可编辑性受生成结构限制，一旦层级生成得不对，改起来比重新画还慢。</p>
-          <p>插件只做到「看见状态」，没做到「安排任务」，离真正的并行调度还差一层。</p>
-        </div>
-        <div class="bx">
-          <h4>如果重来</h4>
-          <p>会先固定一套「结构骨架」再让模型填内容，而不是让它自由生成再纠偏 —— 可控性比惊艳更重要。</p>
-        </div>
+      <div class="ecards">
+        <div class="ec"><img class="eshot" src="assets/8d1b0ce71c690932a46195d4810f199b.png" alt="项目管理界面示意"><h4>项目管理</h4><p>统一搜索、重命名、设图标、绑定规范，并一键进入对应画布项目。</p></div>
+        <div class="ec"><img class="eshot" src="assets/eeae310c223fc323a6d14b06174464d0.png" alt="设计规范库界面示意"><h4>设计规范库</h4><p>全局维护 token；项目绑定后把规范安装进画布，减少颜色、字号、圆角各自漂移。</p></div>
+        <div class="ec"><img class="eshot" src="assets/0dd16947c719bcc0a8a3b30932f499a1.png" alt="组件库界面示意"><h4>组件库</h4><p>工作台直接读取画布的组件页，看到的组件就是编辑器里能取用的组件。</p></div>
+        <div class="ec"><img class="eshot" src="assets/a5b0b0f457d9b18ac5bd6f611132603d.png" alt="快捷指令配置界面示意"><h4>快捷指令配置</h4><p>在工作台配置对话上方的按钮：名称、图标、提示词、打开项目与排序；保存后对话即时生效。</p></div>
+        <div class="ec"><img class="eshot" src="assets/ca87726ca6eaf188a51ec3a1bd788617.png" alt="画布编辑器界面示意"><h4>画布编辑器</h4><p>画板编辑、组件速取与独立副本就地修改，文字和选项不必回到全局组件里改。</p></div>
+        <div class="ec"><img class="eshot" src="assets/dbe1f05210c9ce0bde05dd2aa589cebb.png" alt="评论与说明分离界面示意"><h4>评论与说明分离</h4><p>评论是给 AI 的任务<br>说明是给开发者的业务描述</p></div>
       </div>
     </div>
   </section>
@@ -472,5 +383,21 @@ td.muted{color:var(--t3)}
   </div>
 </div>
 
+
+<script>
+(() => {
+ const sub=document.querySelector('.subnav');
+ const jumps=document.querySelector('.jumps');
+ const links=[...document.querySelectorAll('.subin nav a')];
+ const sections=['workflow','editor','practice'].map(id=>document.getElementById(id)).filter(Boolean);
+ const update=()=>{
+   if(sub&&jumps) sub.classList.toggle('show',jumps.getBoundingClientRect().bottom<0);
+   let active=sections[0];
+   sections.forEach(section=>{if(section.getBoundingClientRect().top<=100) active=section;});
+   links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+active.id));
+ };
+ window.addEventListener('scroll',update,{passive:true}); update();
+})();
+</script>
 </body>
 </html>
