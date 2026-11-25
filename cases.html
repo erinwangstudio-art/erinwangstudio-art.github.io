@@ -5,380 +5,472 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>王雅一 · 项目案例 · AI 产品经理</title>
 <style>
-body{margin:0;font-family:'PingFang SC','Noto Sans SC',system-ui,sans-serif;background:#fbfbfd}
+
+body{margin:0}
 a{color:inherit;text-decoration:none}
 *{box-sizing:border-box}
-.hp{background:#fbfbfd;color:#111114;font-family:'PingFang SC','Noto Sans SC',system-ui,sans-serif;font-size:16px;line-height:1.65}
-.hpwrap{max-width:1180px;margin:0 auto;padding:0 40px}
-.hpnav{position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 40px;border-bottom:1px solid #e6e6ec;background:rgba(255,255,255,.94);backdrop-filter:blur(10px)}
-.hlogo{display:flex;align-items:baseline;gap:10px;font-weight:800;font-size:17px}
-.hlogo i{width:26px;height:26px;border-radius:7px;background:#4338ca;color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:13px}
-.hnav{display:flex;gap:24px;font-size:14px;color:#6b6b76}
-.hnav .on{color:#4338ca;border-bottom:2px solid #4338ca;font-weight:600}
-.hpill{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;background:#111114;color:#fff;padding:9px 16px;border-radius:999px}
-.ph{border:1px dashed #b7b7c6;background:linear-gradient(135deg,#f8f8fb,#f1f1f6);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#6b6b76;text-align:center;padding:18px;gap:6px}
-.ph b{font-size:12px;color:#4338ca;letter-spacing:1px}
-.ph span{font-size:13px;color:#6b6b76;line-height:1.5}
-.ph small{font-size:11px;color:#9a9aa5}
-.ph-cover{aspect-ratio:16/9;width:100%;margin-bottom:16px}
-.ph-wide{aspect-ratio:21/9;width:100%;margin:14px 0 18px}
-.mast{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding:30px 0 22px;border-bottom:2px solid #111114;flex-wrap:wrap}
-.mast .name{font-size:44px;font-weight:800;letter-spacing:1px;line-height:1}
-.mast .role{font-size:12.5px;letter-spacing:3px;color:#4338ca;margin-top:10px;font-weight:600}
-.mast .contact{text-align:right;font-size:13px;color:#6b6b76;line-height:1.8}
-.case-grid{display:grid;grid-template-columns:280px minmax(0,1fr);gap:60px;padding:42px 0 30px}
-.casebar{position:sticky;top:76px;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid #e6e6ec;padding:16px 0 12px;flex-wrap:wrap;background:rgba(251,251,253,.96);backdrop-filter:blur(10px)}
-.casebar .label{font-size:12px;color:#6b6b76;letter-spacing:1px}
-.casebar .ctabs-mini{display:flex;gap:8px;flex-wrap:wrap}
-.casebar .ctab-mini{border:1px solid #e6e6ec;background:#fff;color:#6b6b76;border-radius:999px;padding:6px 12px;font-size:12px;cursor:pointer}
-.casebar .ctab-mini.on{background:#111114;color:#fff;border-color:#111114}
-.nextcase{display:inline-flex;align-items:center;gap:6px;margin-top:16px;border:0;background:transparent;color:#4338ca;font-size:12.5px;font-weight:600;cursor:pointer;padding:0}
-.ai-note{margin-top:12px;border-left:2px solid #4338ca;padding-left:12px;font-size:12.5px;color:#6b6b76;line-height:1.6}
-.ai-note b{color:#111114}
-.idx h2{font-size:15px;letter-spacing:2px;color:#6b6b76;margin:0 0 16px;font-weight:600}
-.idx ul{list-style:none;margin:0;padding:0}
-.idx li{border-top:1px solid #e6e6ec;padding:16px 4px;cursor:pointer;display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:baseline;transition:.2s}
-.idx li:last-child{border-bottom:1px solid #e6e6ec}
-.idx li:hover,.idx li.on{background:#f4f4f8}
-.idx li.on .t{color:#4338ca}
-.idx .n{font-size:13px;color:#6b6b76}
-.idx .t{font-size:20px;font-weight:700;line-height:1.25}
-.idx .s{grid-column:2;font-size:12.5px;color:#6b6b76;margin-top:2px}
-.stage{min-height:520px}
-.image-stack{position:relative;margin:0 0 16px;padding-bottom:56px}
-.image-stack .stack-main{width:100%;height:360px;object-fit:cover;border-radius:12px;display:block}
-.image-stack .stack-over{position:absolute;right:0;bottom:0;width:46%;height:190px;object-fit:cover;border:4px solid #fff;border-radius:12px;box-shadow:0 12px 28px rgba(17,17,20,.18)}
-@media(max-width:980px){.image-stack{padding-bottom:0}.image-stack .stack-over{position:static;width:100%;height:220px;margin-top:10px;border-width:0}}
-.panel .ptop{display:flex;align-items:baseline;justify-content:space-between;gap:20px;border-bottom:1px solid #111114;padding-bottom:10px;flex-wrap:wrap}
-.panel h3{font-size:30px;margin:0;font-weight:800}
-.panel .meta{font-size:12.5px;color:#6b6b76;letter-spacing:1px;white-space:nowrap}
-.panel .desc{font-size:15.5px;color:#2b2b31;margin:16px 0 0;max-width:640px}
-.metrics{display:flex;gap:26px;flex-wrap:wrap;margin:22px 0 6px}
-.metrics div{border-left:2px solid #4338ca;padding-left:11px}
-.metrics b{display:block;font-size:20px;font-weight:800;line-height:1.2}
-.metrics span{font-size:11.5px;color:#6b6b76}
-.scale-note{margin:8px 0 0;font-size:12.5px;line-height:1.55;color:#6b6b76}
-.demo{border:1px solid #e6e6ec;background:#f4f4f8;border-radius:12px;padding:18px;margin-top:22px}
-.demo h4{margin:0 0 12px;font-size:11.5px;letter-spacing:2px;color:#6b6b76;font-weight:600}
-.btn{display:inline-flex;align-items:center;gap:7px;border:1px solid #111114;background:transparent;color:#111114;padding:8px 14px;border-radius:999px;font-size:12.5px;cursor:pointer;min-height:36px}
-.steps{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-.step{font-size:12px;border:1px solid #e6e6ec;border-radius:999px;padding:6px 10px;color:#6b6b76;background:#fff;transition:.3s}
-.step.on{background:#4338ca;color:#fff;border-color:#4338ca}
-.plugin-flow span{font-size:12px;color:#6b6b76;border:1px solid #e6e6ec;border-radius:8px;padding:6px 10px;background:#fff}
-.plugin-flow i{font-style:normal;color:#4338ca;margin:0 3px}
-.editor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
-.ecard{border:1px solid #e6e6ec;border-radius:12px;padding:16px;background:#fff}
-.ecard h4{margin:0 0 8px;font-size:15px}
-.ecard p{margin:0;font-size:13px;color:#6b6b76}
-.sessions{display:flex;flex-direction:column;gap:8px}
-.sess{display:flex;align-items:center;gap:10px;border:1px solid #e6e6ec;border-radius:8px;padding:9px 12px;font-size:13px;cursor:pointer;background:#fff;text-align:left;color:#111114;min-height:40px}
-.lamp{width:10px;height:10px;border-radius:50%;background:#22c55e;flex:none}
-.sess[data-s="warn"] .lamp{background:#f59e0b}
-.sess[data-s="block"] .lamp{background:#ef4444}
-.sess small{margin-left:auto;color:#6b6b76;font-size:11px}
-.case{border-top:1px solid #e6e6ec;padding:56px 0 10px}
-.case .chead{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:18px}
-.case .chead h2{margin:0}
-.case h2{font-size:30px;margin:0 0 8px;font-weight:800}
-.story{display:grid;gap:9px;margin:0 0 22px;padding:18px 20px;border:1px solid #e6e6ec;border-radius:12px;background:#fff}
-.story-row{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;font-size:13.5px;line-height:1.7;color:#2b2b31}
-.story-row b{font-size:12px;letter-spacing:.6px;color:#6b6b76;font-weight:600}
-.story.icons{gap:12px;padding:20px 22px}
-.story.icons .story-row{grid-template-columns:24px 96px minmax(0,1fr);gap:12px;align-items:start}
-.story.icons .story-ic{width:18px;height:18px;color:#4338ca;margin-top:2px;flex:none}
-.story .todo{color:#4338ca;background:#eef0ff;border-bottom:1px dashed #4338ca;padding:0 3px}
-.project-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
-.mini-project{border:1px solid #e6e6ec;border-radius:12px;padding:16px;background:#fff}
-.mini-project .cover-img{height:180px;object-fit:cover;border-radius:10px}
-.mini-project h4{margin:14px 0 6px;font-size:18px}
-.mini-project p{margin:0 0 12px;font-size:13px;color:#6b6b76;line-height:1.6}
-.project-block{border-top:1px solid #e6e6ec;padding-top:28px;margin-top:28px}
-.project-block .subhead{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
-.project-block .subhead h3{margin:0;font-size:22px}
-@media(max-width:980px){.story-row{grid-template-columns:1fr;gap:2px}.story.icons .story-row{grid-template-columns:24px 1fr;gap:8px}.story.icons .story-row b,.story.icons .story-row > span:last-child{grid-column:2}.project-pair{grid-template-columns:1fr}.project-block .subhead{align-items:flex-start;flex-direction:column;gap:8px}}
-.case .clead{color:#2b2b31;font-size:13.5px;margin:0 0 14px;max-width:860px}
-.cnote{font-size:12px;color:#6b6b76;border:1px solid #e6e6ec;border-radius:999px;padding:4px 10px;background:#fff}
-.ctabs{display:flex;gap:4px;border-bottom:1px solid #e6e6ec;margin-bottom:18px;flex-wrap:wrap}
-.ctab{border:0;background:transparent;font:inherit;font-size:13px;color:#6b6b76;padding:9px 14px;border-radius:8px 8px 0 0;border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer}
-.ctab.on{color:#4338ca;font-weight:600;border-bottom-color:#4338ca;background:#fff}
-.cbuilder{display:grid;grid-template-columns:190px minmax(0,1fr) 270px;gap:14px}
-.cside,.ccfg{background:#fff;border:1px solid #e6e6ec;border-radius:12px;padding:12px}
-.cside h3{font-size:11px;color:#6b6b76;letter-spacing:.6px;margin:0 0 10px;font-weight:600}
-.ctpl{border:1px solid #e6e6ec;border-radius:8px;padding:9px 10px;margin-bottom:8px;background:#fff}
-.ctpl.on{border-color:#4338ca;background:#eef0ff}
-.ctpl b{display:block;font-size:12.5px;font-weight:600;margin-bottom:2px}
-.ctpl span{font-size:11px;color:#6b6b76}
-.ccanvas{position:relative;background:linear-gradient(0deg,#f0f0f6 1px,transparent 1px) 0 0/16px 16px,linear-gradient(90deg,#f0f0f6 1px,transparent 1px) 0 0/16px 16px,#fcfcfe;border:1px solid #e6e6ec;border-radius:12px;min-height:360px;padding:16px}
-.cgrid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 18px}
-.cnode{position:relative;z-index:2;background:#fff;border:1px solid #d9d9e6;border-radius:9px;padding:9px 10px;cursor:pointer}
-.cnode.on{border-color:#4338ca;box-shadow:0 0 0 2px rgba(67,56,202,.16)}
-.cnode .nt{font-size:12px;font-weight:600;margin-bottom:5px}
-.cnode .nm{display:flex;align-items:center;gap:6px;font-size:10.5px;color:#6b6b76}
-.cdot{width:6px;height:6px;border-radius:50%;flex:none;background:#2f9e6e}
-.cdot.human{background:#e0a030}
-.cnode .cost{position:absolute;right:9px;bottom:8px;font-size:10px;color:#6b6b76}
-.ccfg .title{font-size:13px;font-weight:600;margin:0 0 2px}
-.ccfg .role{font-size:11px;color:#6b6b76;margin-bottom:12px}
-.ckv{margin-bottom:10px}.ckv .k{font-size:10.5px;color:#6b6b76;letter-spacing:.4px;margin-bottom:2px}.ckv .v{font-size:12px;color:#111114}
-.cdiv{height:1px;background:#e6e6ec;margin:10px 0}
-.ctablewrap{background:#fff;border:1px solid #e6e6ec;border-radius:12px;overflow:auto}
-table.ccap{width:100%;border-collapse:collapse;font-size:12px;min-width:760px}
-table.ccap th{text-align:left;font-weight:600;color:#6b6b76;font-size:10.5px;letter-spacing:.5px;padding:9px 10px;border-bottom:1px solid #e6e6ec;white-space:nowrap;background:#fbfbfe}
-table.ccap th.num{text-align:right}
-table.ccap td{padding:9px 10px;border-bottom:1px solid #f1f1f7;vertical-align:middle}
-table.ccap td.num{text-align:right;font-variant-numeric:tabular-nums}
-table.ccap td.muted{color:#6b6b76;font-size:11px}
-.cbar{height:5px;border-radius:3px;background:#ededf5;position:relative;min-width:54px}
-.cbar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:#4338ca}
-.cbar i.hot{background:#c0563f}
-.ceval{display:grid;grid-template-columns:1.25fr 1fr;gap:14px}
-.ccard{background:#fff;border:1px solid #e6e6ec;border-radius:12px;padding:14px}
-.ckpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
-.ckpi .box{border:1px solid #e6e6ec;border-radius:8px;padding:10px}
-.ckpi .l{font-size:10.5px;color:#6b6b76;margin-bottom:4px}
-.ckpi .n{font-size:19px;font-weight:600;letter-spacing:.3px}
-.ckpi .box.bad .n{color:#c0563f}.ckpi .box.good .n{color:#1b7a54}
-.ckpi .u{font-size:10.5px;color:#6b6b76}
-.crowbar{display:grid;grid-template-columns:78px 1fr 48px;align-items:center;gap:9px;margin-bottom:9px;font-size:11.5px}
-.crowbar .tr{height:14px;background:#f0f0f6;border-radius:4px;position:relative;overflow:hidden}
-.crowbar .tr i{position:absolute;left:0;top:0;bottom:0;background:#c7c7e0;border-radius:4px}
-.crowbar .tr i.hot{background:#d98e6e}
-.crowbar .vv{text-align:right;color:#6b6b76}
-.cfootnote{font-size:11px;color:#6b6b76;margin-top:10px}
-.ch3{font-size:12px;color:#6b6b76;letter-spacing:.5px;margin:0 0 12px}
-.foot{border-top:1px solid #e6e6ec;margin-top:30px;padding:22px 0 50px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#6b6b76}
-@media(max-width:980px){.case-grid{grid-template-columns:1fr}.cbuilder,.ceval,.editor-grid{grid-template-columns:1fr}}
-@media(max-width:640px){
- .hpnav{padding:12px 18px;gap:10px;flex-wrap:wrap;position:static}.hlogo{font-size:15px;white-space:nowrap}.hnav{order:3;width:100%;justify-content:space-between;gap:12px}.hnav a{padding:8px 0}.hpill{margin-left:auto;white-space:nowrap}.hpwrap{padding:0 18px}
- .casebar{position:static;align-items:flex-start;gap:10px}.ctabs-mini{width:100%;display:flex;overflow-x:auto;flex-wrap:nowrap!important;padding-bottom:4px}.ctab-mini{white-space:nowrap;min-height:40px}.case-grid{gap:20px;padding:24px 0}.idx ul{display:flex;overflow-x:auto;gap:8px}.idx li{flex:0 0 180px;padding:10px;border:1px solid #e6e6ec;border-radius:8px}.idx .t{font-size:15px}.stage{min-width:0;min-height:0}.panel h3{font-size:24px}.panel .ptop{gap:8px}.panel .desc{height:auto!important;overflow-wrap:anywhere}.panel .cover-img{width:100%!important;height:auto!important;aspect-ratio:16/9}.image-stack{padding-bottom:0}.image-stack .stack-main,.image-stack .stack-over{position:static;width:100%!important;height:auto!important;aspect-ratio:16/9;object-fit:cover}.image-stack .stack-over{margin-top:10px;order:2}.metrics{gap:14px}
- .case{padding:36px 0 10px}.case .chead{flex-wrap:wrap;gap:10px}.case h2{font-size:24px}.ctabs{gap:0}.ctab{padding:10px 8px;font-size:12px}.cbuilder{grid-template-columns:1fr}.cgrid3{grid-template-columns:1fr;gap:10px}.ccanvas{min-height:0}.cnode .cost{position:static;text-align:right;margin-top:4px}.ctablewrap{max-width:100%;overflow-x:auto}.project-block .subhead{flex-wrap:wrap}.project-pair,.editor-grid{grid-template-columns:1fr!important}.story{padding:16px}.story-row{overflow-wrap:anywhere}.cnote{white-space:normal}
+:root{
+  --ink:#0B0B0D;--ink2:#141417;--lined:#2A2A31;
+  --paper:#F7F7F4;--card:#FFF;--line:#E4E3DE;
+  --t1:#17171A;--t2:#5F5E5A;--t3:#8A8880;
+  --d1:#F5F5F2;--d2:#A9A9A3;--d3:#75756F;
+  --a:#6E63F5;--at:#8C84FF;--ad:#4B41D6;--amb:#BA7517;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,monospace;
 }
+.site{font-family:'PingFang SC','Noto Sans SC',system-ui,sans-serif;font-size:16px;line-height:1.65;color:var(--t1);background:var(--paper)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 48px}
+.dark{background:var(--ink);color:var(--d1)}
+.nav{border-bottom:1px solid var(--lined)}
+.navin{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
+.brand{display:flex;align-items:baseline;gap:10px}
+.mark{width:26px;height:26px;border-radius:7px;background:var(--d1);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;align-self:center}
+.bn{font-size:16px;font-weight:500}
+.bt{font-size:11px;color:var(--d3);letter-spacing:.6px}
+.links{display:flex;gap:26px;font-size:13.5px;color:var(--d2)}
+.links a:hover{color:var(--d1)}
+.links a.on{color:var(--d1);font-weight:600;border-bottom:2px solid var(--at);padding-bottom:4px}
+.navcta{font-size:12.5px;font-weight:500;color:var(--ink);background:var(--d1);padding:9px 16px;border-radius:999px}
+.hhero{padding:64px 0 56px}
+.kick{margin:0 0 20px;font-size:12px;letter-spacing:1.6px;color:var(--at);font-weight:500}
+.hhero h1{margin:0;font-size:48px;line-height:1.2;letter-spacing:-1.2px;font-weight:500;color:#FFF}
+.hhero .lead{margin:22px 0 0;font-size:15px;line-height:1.95;color:var(--d2);max-width:700px}
+.jumps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:36px}
+.jump{background:var(--ink2);border:1px solid var(--lined);border-radius:12px;padding:18px 20px;display:block}
+.jump:hover{border-color:#3A3A44}
+.jump .jn{font-family:var(--mono);font-size:11px;color:var(--at);letter-spacing:1px}
+.jump h4{margin:8px 0 6px;font-size:15px;font-weight:500;color:#fff}
+.jump p{margin:0;font-size:12px;line-height:1.7;color:var(--d3)}
+.subnav{display:block;position:sticky;top:0;z-index:50;background:rgba(247,247,244,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.subnav.show{display:block}
+.subin{display:flex;align-items:center;justify-content:space-between;gap:16px;height:54px}
+.subin nav{display:flex;gap:24px;font-size:12.5px;color:var(--t2)}
+.subin nav a:hover{color:var(--ad)}
+.subin nav a.on{color:var(--ad);font-weight:600;border-bottom:2px solid var(--ad);padding-bottom:4px}
+.brail{font-family:var(--mono);font-size:11.5px;color:var(--t3)}
+.case{padding:72px 0 56px;border-top:1px solid var(--line);scroll-margin-top:54px}
+.case:first-of-type{border-top:0}
+.cid{font-family:var(--mono);font-size:11px;letter-spacing:1.6px;color:var(--ad)}
+.chead h2{margin:10px 0 10px;font-size:34px;line-height:1.3;letter-spacing:-.8px;font-weight:500}
+.cmeta{font-size:13px;color:var(--t2);margin:0}
+.cmeta b{color:var(--t1);font-weight:500}
+.verdict{background:var(--ink);border-radius:16px;padding:32px 34px;margin:28px 0 0;color:#fff}
+.vk{font-size:11px;letter-spacing:1.6px;color:var(--at);margin:0 0 12px;font-weight:500}
+.vt{font-size:20px;line-height:1.75;margin:0;max-width:920px;color:#EDEDEA}
+.vt b{color:#fff;font-weight:500}
+.vkpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:24px;padding-top:20px;border-top:1px solid var(--lined)}
+.vkpis b{display:block;font-family:var(--mono);font-size:21px;color:#fff;font-variant-numeric:tabular-nums;line-height:1.3}
+.vkpis span{font-size:11px;color:var(--d3);display:block;margin-top:2px}
+.s{display:flex;align-items:baseline;gap:14px;margin:44px 0 16px;flex-wrap:wrap}
+.s .sn{font-family:var(--mono);font-size:11px;color:var(--ad);letter-spacing:1px;flex:none}
+.s h3{font-size:18px;font-weight:500;margin:0;letter-spacing:-.2px}
+.s .sd{font-size:12.5px;color:var(--t3)}
+.bg{border:1px solid var(--line);border-radius:12px;background:#fff;padding:0 20px}
+.bg summary{list-style:none;cursor:pointer;padding:15px 0;font-size:13.5px;display:flex;align-items:center;gap:10px;color:var(--t1)}
+.bg summary::-webkit-details-marker{display:none}
+.bg summary::before{content:"+";font-family:var(--mono);color:var(--ad);font-size:14px;flex:none}
+.bg[open] summary::before{content:"—"}
+.bg .inner{padding:0 0 18px;font-size:13px;line-height:1.95;color:var(--t2);max-width:860px}
+.bg .inner p{margin:0 0 10px}
+.bg .inner p:last-child{margin:0}
+.jgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.jcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-direction:column}
+.jcard .jq{font-size:14.5px;font-weight:500;line-height:1.55;margin:0 0 10px}
+.jcard .jw{font-size:12.5px;line-height:1.9;color:var(--t2);margin:0 0 14px}
+.jcard .jc{font-size:11.5px;line-height:1.8;color:var(--amb);border-top:1px dashed var(--line);padding-top:10px;margin:auto 0 0}
+.jcard .jc b{font-weight:500}
+.flow{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.rgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+.rgrid b{display:block;font-family:var(--mono);font-size:23px;font-variant-numeric:tabular-nums;line-height:1.3}
+.rgrid span{font-size:11.5px;color:var(--t2);display:block;margin-top:2px}
+.flow-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:16px;align-items:start}
+.flow-shot{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px;object-fit:cover}
+.flow-diagram{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px;margin-top:16px;object-fit:contain}
+.cfg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cfgi{background:#fff;padding:14px 16px}
+.cfgi .k{font-size:10.5px;color:var(--t3);letter-spacing:.4px;margin-bottom:4px}
+.cfgi .v{font-size:12px;line-height:1.7;color:var(--t1)}
+.cfgi.warn .v{color:#8A5A12}
+.cfghead{grid-column:1/-1;background:#fff;padding:13px 16px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.cfghead b{font-size:13.5px;font-weight:500}
+.cfghead span{font-size:11.5px;color:var(--t3)}
+.tbl{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:12px;min-width:840px}
+th{text-align:left;font-weight:500;color:var(--t3);font-size:10.5px;letter-spacing:.5px;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap;background:#FCFCFA}
+th.num,td.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono)}
+td{padding:10px 12px;border-bottom:1px solid #F1F0EC;vertical-align:middle}
+td.name{font-weight:500}
+td.muted{color:var(--t3)}
+.notes{font-size:11.5px;color:var(--t3);line-height:1.95;margin-top:14px}
+.rev{background:#FDF6EC;border:1px solid #F0DCBE;border-radius:12px;padding:18px 20px;margin-top:16px;font-size:12.5px;line-height:1.9;color:#7A4E12}
+.rev b{color:#5C3A07;font-weight:500}
+.boxtwo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.bx{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
+.bx h4{margin:0 0 10px;font-size:14px;font-weight:500}
+.bx p{margin:0;font-size:12.5px;line-height:1.95;color:var(--t2)}
+.bx p+p{margin-top:8px}
+.ecards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
+.ec{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}
+.ec h4{margin:0 0 8px;font-size:14.5px;font-weight:500}
+.ec p{margin:0;font-size:12.5px;line-height:1.85;color:var(--t2)}
+.shot{width:100%;border-radius:12px;display:block;border:1px solid var(--line);object-fit:cover}
+.pblock{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;margin-top:16px}
+.pblock .ph{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+.pblock h4{margin:0;font-size:17px;font-weight:500}
+.pblock .pl{font-size:11.5px;color:var(--t3);font-family:var(--mono)}
+.pblock p{margin:0 0 10px;font-size:12.5px;line-height:1.95;color:var(--t2)}
+.pblock p:last-child{margin:0}
+.about{padding:64px 0 48px}
+.about h2{font-size:28px;line-height:1.4;letter-spacing:-.5px;margin:0 0 14px;font-weight:500;color:#fff}
+.about p{font-size:13.5px;line-height:1.9;color:var(--d2);margin:0;max-width:560px}
+.foot{border-top:1px solid var(--lined);padding:20px 0 36px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--d3)}
+@media(max-width:1100px){
+  .jumps,.jgrid,.ecards,.boxtwo{grid-template-columns:1fr}
+  .nodes{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .cfg{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .flow-layout{grid-template-columns:1fr}
+  .vkpis,.rgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wrap{padding:0 32px}
+  .hhero h1{font-size:36px}
+}
+@media(max-width:760px){
+  .wrap{padding:0 20px}
+  .navin{height:auto;padding:14px 0;flex-wrap:wrap;gap:12px}
+  .links{gap:18px;font-size:12.5px;order:3;width:100%}
+  .hhero h1{font-size:28px}
+  .chead h2{font-size:24px}
+  .nodes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cfg,.vkpis,.rgrid{grid-template-columns:1fr}
+  .subin nav{gap:14px;font-size:11.5px}
+  .vt{font-size:16px}
+}
+
 </style>
 </head>
 <body>
-<div class="hp" id="top">
-  <div class="hpnav">
-    <div class="hlogo"><i>王</i>Erin Wang<span style="font-weight:500;color:#6b6b76;font-size:13px">AI PM</span></div>
-    <nav class="hnav">
-      <a href="index.html">首页</a>
-      <a class="on" href="cases.html">项目案例</a>
-      <a href="experience.html">个人经历</a>
-    </nav>
-    <a class="hpill" href="index.html#contact">联系我 ↗</a>
+
+
+<div class="site" id="top">
+  <div class="dark">
+    <header class="nav">
+      <div class="wrap navin">
+        <div class="brand"><span class="bn">Erin Wang</span><span class="bt">AI 产品经理</span></div>
+        <nav class="links">
+          <a href="index.html">首页</a>
+          <a class="on" href="cases.html">项目案例</a>
+          <a href="experience.html">个人经历</a>
+        </nav>
+        <a class="navcta" href="index.html#contact">聊一聊 ↗</a>
+      </div>
+    </header>
+    <section class="hhero wrap">
+      <p class="kick">SELECTED WORK · 3 CASES · 2022–2026</p>
+      <h1></h1><h1 style="font-size: 44px; letter-spacing: -0.8px; margin: 0px 0px 16px; font-weight: 700">持续学习·沉淀AI native的工作方式和平台能力</h1>
+      <p class="lead"><span style="color: rgb(117, 117, 111); font-family: ui-monospace, &quot;SF Mono&quot;, SFMono-Regular, Menlo, monospace; font-size: 12.5px">3 个核心案例 · 点击切换查看设计决策详情</span></p>
+      <div class="jumps">
+        <a class="jump" href="#workflow">
+          <span class="jn">CASE 01</span>
+          <h4>AI 工作流引擎与编排平台</h4>
+          <p>7 个原子能力 + 2 个人工闸门，日均开款 8×</p>
+        </a>
+        <a class="jump" href="#editor">
+          <span class="jn">CASE 02</span>
+          <h4>独立站可视化编辑器</h4>
+          <p>组件原子化 + 多市场配置，主题开发 +30%</p>
+        </a>
+        <a class="jump" href="#practice">
+          <span class="jn">CASE 03</span>
+          <h4>个人 AI 实践</h4>
+          <p>100w+ 用户工具、画布工作流、已上架插件</p>
+        </a>
+      </div>
+    </section>
   </div>
 
-  <div class="hpwrap">
-    <div class="casebar">
-      <span class="label">3 个案例 · 点击切换</span>
-      <div class="ctabs-mini">
-        <button class="ctab-mini on" data-p="workflow">01 AI 工作流引擎</button>
-        <button class="ctab-mini" data-p="editor">02 独立站可视化编辑器</button>
-        <button class="ctab-mini" data-p="practice">03 个人AI实践</button>
-      </div>
+  <div class="subnav">
+    <div class="wrap subin">
+      <nav>
+        <a href="#workflow">01 工作流引擎</a>
+        <a href="#editor">02 可视化编辑器</a>
+        <a href="#practice">03 个人 AI 实践</a>
+      </nav>
+      <a class="brail" href="#top">↑ 回到顶部</a>
     </div>
+  </div>
 
-    <div class="case-grid">
-      <div class="idx">
-        <h2>INDEX · 案例</h2>
-        <ul>
-          <li class="on" data-p="workflow"><span class="n">01</span><span class="t">AI 工作流引擎</span><span class="s">含采集插件 · 可玩示例</span></li>
-          <li data-p="editor"><span class="n">02</span><span class="t">独立站可视化编辑器</span><span class="s">主题系统 · 多市场装修</span></li>
-          <li data-p="practice"><span class="n">03</span><span class="t">个人AI实践</span><span class="s">AI 画布 · DSH 插件</span></li>
-        </ul>
+  <section class="case" id="workflow">
+    <div class="wrap" style="position: relative">
+      <div class="chead">
+        <p class="cid">CASE 01</p>
+        <h2>AI 工作流引擎与编排平台</h2>
+        <p class="cmeta"><b>2025 至今</b> · 跨境电商 Temu POD · 智能体业务研发中心 · <b>产品经理</b></p>
       </div>
-      <div class="stage">
-        <div data-case-panel="workflow" id="workflow" style="display:block">
-        <div class="panel">
-            
-            <div class="ptop"><h3>AI 工作流引擎与编排平台</h3><span class="meta">2025 – 至今</span></div>
-            
-            <p class="desc" style="font-size: 15.5px; color: #111114; text-align: left; height: 100%; width: 100%; max-width: none"><span style="color: rgb(107, 107, 118); font-size: 14px; background-color: rgb(255, 255, 255)">针对跨境电商商品资料生产与上架场景，定义原子能力与工作流模板，引入「人工审核 + AI 执行」混合机制。浏览器采集插件作为数据入口，打通采集→清洗→AI 处理→上架整条链路。</span></p><div class="metrics" style="justify-content: space-between"><div><b>500→4000</b><span>日均开款量（8×）</span></div><div><b>10→40</b><span>人均管理店铺（4×）</span></div><div style="width: 117px; height: 50px"><b>80%+</b><span>核心流程覆盖</span></div></div><p class="scale-note">覆盖 10 个 Temu 主体、190 家店铺；月均产出图案 2.5 万个；商家上款 90% 直接跟卖原图；人力配置 8 人 → 3 人。</p>
-            
-            
-            
-            <div class="image-stack"><img class="stack-over" src="assets/workflow-detail.png" alt="工作流链路补充图" style="width: 429px; height: 243px; left: 332px; top: 174px; object-fit: cover; object-position: 100% 49.351%; object-view-box: inset(10.1694% 0% 10.4369% 28.9946%)"><img class="stack-main" src="assets/workflow-sample.png" alt="AI 工作流示例" style="object-fit: cover; object-position: 50% 27.102%"></div>
+
+      <div class="verdict">
+        <p class="vk">结论</p>
+        <p class="vt" style="max-width:none;width:100%">把「靠运营经验」的商品生产，改成 10+<b>&nbsp;个原子能力 + 4 个人机协同的工作流模板</b>。日均开款 500 → 4000，人均管店 10 → 40，单商品模型成本压到 ¥0.45。</p>
+        <div class="vkpis">
+          <div><b>8×</b><span>日均开款量</span></div>
+          <div><b>2×</b><span>人均管理店铺</span></div>
+          <div><b>¥0.45</b><span>单商品模型成本</span></div>
+          <div><b>80%+</b><span>核心流程 AI 覆盖</span></div>
         </div>
+      </div>
+
+      <div class="s"><span class="sn">01</span><h3>背景与问题</h3></div>
+      <details class="bg">
+        <summary>商品生产链路原本靠运营个人经验串起来：看竞品 → 采素材 → 加工 → 规避风险 → 录商品数据上架</summary>
+        <div class="inner">
+          <p style="width: 1047px">链路涉及采集、清洗、图像处理、风险识别、上架五个环节，每个环节都有自己的工具，但没有一处沉淀成可复用的能力。结果是：经验的边际复制成本极高，新人上手要跟三个月。</p>
+          <p>真正的瓶颈不是「某个模型不够准」，而是「整条链路无法度量」—— 没人说得清哪个环节吃掉了最多的钱、哪个环节错得最贵。</p>
         </div>
-        <div data-case-panel="editor" id="editor" style="display:none">
-        <div class="panel">
-            
-            <div class="ptop"><h3>可视化编辑器</h3><span class="meta">2024.05 – 2025.03</span></div>
-            <p class="desc" style="font-size: 15.5px; color: #111114; text-align: left; height: 100%; width: 100%; max-width: none"><span style="color: rgb(107, 107, 118); font-size: 14px; background-color: rgb(255, 255, 255)">SHOPLINE 主题编辑器：把页面组件原子级拆解与标准化，扩展 Flexbox 布局，支持多市场差异化装修，并搭建主题商城生态。</span><a class="nextcase" href="https://www.shopline.com/themes" target="_blank" style="text-align: start">项目介绍：shopline.com/themes ↗</a></p>
-            <div class="metrics" style="justify-content: space-between"><div><b>30%+</b><span>主题开发效率提升</span></div><div style="width: 126px"><b>多市场</b><span>全球化运营</span></div><div style="width: 107px"><b>千万级</b><span>KA 商家 GMV</span></div></div><img class="cover-img" src="assets/editor-sample.webp" alt="独立站编辑器示例" style="width: 100%; height: 424px; object-fit: cover; object-position: 50% 0.0009%">
-            
-            
-            
-            
+      </details>
+
+      <div class="s"><span class="sn">02</span><h3>我的判断</h3></div>
+      <div class="jgrid">
+        <div class="jcard">
+          <p class="jq">项目总体规划</p>
+          <p class="jw">节点和模板不一次做完。第一阶段先把开款的几种主要方式收成流程节点，挑使用率最高的一条，把工作流、节点配置和人机协作跑通。第二阶段再加「上架」，让人机协作更好用。第三阶段拓展开款模板和节点。</p>
+          <p class="jc">按业务数据的先后依次做，不并行铺开。</p>
+        </div><div class="jcard">
+          <p class="jq">单点能力与人机协同</p>
+          <p class="jw">采集、清洗、图像处理、风险识别、上架，任务差异大、工具也散，端到端难评测、中间结果也难查。按目标拆成原子模型，每一步单独评测、单独换、单独停。人工只在必要时介入。</p>
+          <p class="jc">模型任务单独拆分，分别定义标准</p>
+        </div>
+        <div class="jcard">
+          <p class="jq">成本与效果</p>
+          <p class="jw">任务量、准确率、人工复核、响应时间、单次成本，按节点对照，直观看得见钱花在哪，效果是否符合预期。便于持续迭代。</p>
+          <p class="jc">持续监测数据，持续迭代</p>
+        </div>
+
+      </div>
+
+      <div class="s"><span class="sn">03</span><h3>方案：工作流与节点设计</h3><span class="sd">一条业务链路，一个节点示例</span></div>
+      <div class="flow">
+        <div class="flow-layout">
+          <div><img class="flow-shot" src="assets/248240b7309eb75bf602755002b1ffa1.png" alt="工作流编排系统截图"></div>
+          <div class="cfg">
+            <div class="cfghead"><b>图案/商品去重</b><span>节点示例 · 多维度分层识别</span></div>
+            <div class="cfgi"><div class="k">输入 / 输出</div><div class="v">商品图 → 图案、图案位置、图案大小、底衫版型<br>是否重复、重复内容</div></div>
+            <div class="cfgi"><div class="k">判断与处理逻辑</div><div class="v">在主体已发布商品及批次内商品范围内进行向量检索，如有返回重复内容，不重复则写入向量库</div></div>
+            <div class="cfgi"><div class="k">失败处理</div><div class="v">超时 → 规则兜底 → 人工队列</div></div>
+            <div class="cfgi warn"><div class="k">已知问题</div><div class="v">图案相似度在80～85%范围时是否重复需要人工介入判断</div></div>
           </div>
         </div>
-        <div data-case-panel="practice" id="practice" style="display:none">
-        <div class="panel">
-            <div class="ptop"><h3>个人AI实践</h3><span class="meta">开源 · 个人项目</span></div>
-            <p class="desc" style="font-size: 15.5px; color: #111114; text-align: left; height: 100%; width: 100%; max-width: none"><span style="color: rgb(107, 107, 118); font-size: 14px; background-color: rgb(255, 255, 255)">把 AI 变成自己的日常工具：基于DSH插件生态，搭建个人工作AI相关基础工具。&nbsp;把需求生成可编辑画布原型；改造并开源 DSH 插件，沉淀 Agent 工作流与产品化实践。</span></p>
-            <img class="cover-img" src="assets/ai-canvas-sample.png" alt="AI 画布编辑器示例" style="width: 757px; object-fit: cover; object-position: 50% 0.0029%; height: 393px"><div class="project-pair">
-              
-              
-            </div>
+
+      </div>
+
+      <div class="s"><span class="sn">04</span><h3>能力数据看板</h3><span class="sd"><br></span></div>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>能力</th><th>产出物</th><th class="num">任务量</th><th class="num">准确率</th><th class="num">人工复核</th><th class="num">响应时间</th><th class="num">单次成本</th></tr></thead>
+          <tbody>
+            <tr><td class="name">图片质量检测</td><td class="muted">pass / fail + 原因码</td><td class="num">约 4 万</td><td class="num">90%+</td><td class="num">不需要</td><td class="num">1s</td><td class="num">&lt; ¥0.01</td></tr>
+            <tr><td class="name">底衫版型检测</td><td class="muted">四维标签 + 匹配Top版型</td><td class="num">约 3–4 万</td><td class="num">90%+</td><td class="num">20%</td><td class="num">5s</td><td class="num">约 ¥0.03</td></tr>
+            <tr><td class="name">logo 提取</td><td class="muted">透明底图案</td><td class="num">约数千</td><td class="num">—</td><td class="num">不需要</td><td class="num">45s</td><td class="num">约 ¥0.2</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="notes">仅展示部分节点租户日均数据示例。任务量和金额按量级脱敏</p>
+
+
+
+
+
+      <div class="s"><span class="sn">05</span><h3>复盘反思</h3></div>
+      <div class="boxtwo">
+        <div class="bx">
+          <h4>可优化点</h4>
+          <p>数据采集依赖爬虫，受平台风控影响。<br>人工介入触发时机没有明确规则，飞书/企微只能被动兜底。<br>节点存在前后依赖，模板还不能自由拆装。</p>
+
         </div>
+        <div class="bx">
+          <h4>如果重来</h4>
+          <p>封装成独立应用，有系统级消息通知，部分小模型可以在本地运行；<br>应用内调用浏览器进行数据采集自动化<br>模块化拆装更灵活接入上下游</p>
+
         </div>
       </div>
     </div>
+  </section>
 
-        <div data-deep-case="workflow" style="display:block">
-    <section class="case">
-      <div class="chead"><h2>AI商品生产链路</h2><span class="cnote" style="font-weight:400">脱敏示例 · 数据为演示模拟值</span></div>
-      <div class="story icons">
-        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M8 13h8M8 17h8"></path></svg><b>背景</b><span>Temu POD业务，商品生产与上架链路传统方式依赖运营个人经验，跟进竞品/热门商品，采集原素材，进行素材加工后规避平台风险，最终录入商品数据平台上架；涉及采集、清洗、图像处理、风险识别和上架等多个环节。</span></div>
-        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg><b>核心问题</b><span>依赖个人经验、处理工具分散、难以沉淀经验工团队使用，人工处理成为规模化扩张的瓶颈。</span></div>
-        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"></path><path d="m3 12 9 5 9-5"></path><path d="m3 17 9 5 9-5"></path></svg><b>解决方式</b><span>定义原子能力与工作流模板，引入「人工审核 + AI 执行」混合机制，并通过浏览器采集插件统一数据入口。</span></div>
-        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><b>我的作用</b><span>主导定义原子能力、工作流编排与人机协同机制；</span></div>
-        <div class="story-row"><svg class="story-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2"></circle><circle cx="19" cy="6" r="2"></circle><circle cx="12" cy="18" r="2"></circle><path d="M6.7 7.2 10.8 16M17.3 7.2 13.2 16M7 6h10"></path></svg><b>推进过程</b><span>梳理链路 → 拆分能力节点 → 定义输入输出契约 / 阈值 / 失败降级 → 协同工程实现 → 用覆盖率、成本与人工复核口径评测迭代</span></div>
+  <section class="case" id="editor">
+    <div class="wrap">
+      <div class="chead">
+        <p class="cid">CASE 02</p>
+        <h2>独立站可视化编辑器</h2>
+        <p class="cmeta"><b>2024.05 – 2025.03</b> · SHOPLINE Consumer Experience · <b>建站产品经理</b></p>
       </div>
-      
-      
-      
-      <div class="ctabs">
-        <button class="ctab on" data-ct="p1">① 工作流编排 · 点节点看配置</button>
-        <button class="ctab" data-ct="p2">② AI 能力库 · 10 类能力</button>
-      </div>
-      <div data-ct-panel="p1" style="display:block">
-        <div class="cbuilder">
-          <div class="cside"><h3>流程模板</h3><div class="ctpl on"><b>跟款选品</b><span>采集 → 上架　7 节点</span></div><div class="ctpl"><b>跟卖贴图</b><span>logo → 贴图　6 节点</span></div><div class="ctpl"><b>自动化履约</b><span>抠图 → 蒙版　2 节点</span></div><div class="cdiv"></div><h3>本链路</h3><div class="ckv"><div class="k">端到端转化</div><div class="v">8.9%（45,691 → 4,078）</div></div><div class="ckv"><div class="k">人工介入节点</div><div class="v">2 / 7</div></div></div>
-          <div class="ccanvas"><div class="cgrid3" data-node-grid></div></div>
-          <div class="ccfg" data-cfg><div class="title"></div><div class="role"></div><div class="ckv"><div class="k">输入 / 输出契约</div><div class="v"></div></div><div class="ckv"><div class="k">拒答边界</div><div class="v"></div></div><div class="ckv"><div class="k">阈值</div><div class="v"></div></div><div class="ckv"><div class="k">失败降级路径</div><div class="v"></div></div><div class="cdiv"></div><div class="ckv"><div class="k">已知失效模式</div><div class="v" style="color:#b4690e"></div></div></div>
+
+      <div class="verdict">
+        <p class="vk">结论</p>
+        <p class="vt">把页面组件<b>原子化</b>、把布局在 <b>Flexbox</b> 上扩展，让同一套主题在多个市场独立装修。便于接入AI助手，主题开发效率 +30%，支撑千万级 KA 商家的 GMV，并从 0→1 搭起主题商城的开发者生态。</p>
+        <div class="vkpis">
+          <div><b>30%+</b><span>主题开发提效</span></div>
+          <div><b>千万级</b><span>KA 商家 GMV</span></div>
+          <div><b>多市场</b><span>单主题独立装修</span></div>
+          <div><b>0→1</b><span>主题商城生态</span></div>
         </div>
       </div>
-      <div data-ct-panel="p2" style="display:none">
-        <div class="ctablewrap"><table class="ccap"><thead><tr><th style="width:150px">能力</th><th>产出物</th><th class="num">任务量</th><th class="num">覆盖率</th><th class="num">返回准确率</th><th class="num">人工复核</th><th class="num">单次成本</th><th style="width:120px">单产出成本</th></tr></thead><tbody data-cap-rows></tbody></table></div>
-        <p class="cfootnote">口径：以人工复核结果为 gold standard，分层抽 200 条；单产出成本 =（模型 + 人工 + 返工）÷ 正确产出数。</p>
+
+      <div class="s"><span class="sn">01</span><h3>背景与问题</h3></div>
+      <details class="bg">
+        <summary>全球独立站商家要低成本建站、要按国家/地区分别装修，而主题一直依赖代码开发</summary>
+        <div class="inner">
+          <p>页面组件不标准，每个新场景都在写新模块，复用率低；布局能力有限，商家想调结构就得改代码；多市场要么复制多套主题，要么手工改配置，维护成本随市场数量线性上升。</p>
+        </div>
+      </details>
+
+      <div class="s"><span class="sn">02</span><h3>我的判断</h3></div>
+      <div class="jgrid">
+        <div class="jcard">
+          <p class="jq">组件原子化，不持续堆section</p>
+          <p class="jw">按场景做模块，短期快、长期废。原子化之后，新场景是「组合」而不是「开发」。</p>
+          <p class="jc">配置项变多，商家首次上手会懵，需要更友好的引导</p>
+        </div>
+        <div class="jcard">
+          <p class="jq">引入布局从Flexbox开始</p>
+          <p class="jw">与前端开发习惯保持一致，对主题开发者和AI友好，便于维护。</p>
+          <p class="jc">需要新增一套完整的新主题做范例</p>
+        </div>
+        <div class="jcard">
+          <p class="jq">多市场用「基础配置 + 单市场覆盖」</p>
+          <p class="jw">不做多套主题。一份基础配置，每个市场只写差异部分，改一次全局生效。对非多市场商家无感。</p>
+          <p class="jc">页面结构整体增加一个层级，测试覆盖面大</p>
+        </div>
       </div>
+
+      <div class="s"><span class="sn">03</span><h3>方案</h3></div>
+      <div class="ecards">
+        <div class="ec">
+          <h4>主题架构升级</h4>
+          <p>页面组件原子级拆解与标准化，构建基础组件库与可复用组件体系；基于 Flexbox 扩展布局模型，让结构调整不再依赖代码。</p>
+        </div>
+        <div class="ec">
+          <h4>多市场装修</h4>
+          <p>「基础配置 + 单市场差异化配置」体系，同一主题在不同国家/地区独立装修，覆盖层优先级与继承规则显式定义。</p>
+        </div>
+        <div class="ec">
+          <h4>生态商业化</h4>
+          <p>0→1 搭建主题商城，建立第三方开发者入驻、审核、发布与运营流程，把主题从「项目交付」变成「商品供给」。</p>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="s"><span class="sn">04</span><h3>边界与反思</h3></div>
+      <div class="boxtwo">
+        <div class="bx">
+          <h4>可优化点</h4>
+          <p>灵活度提升在操作的理解上增加了难度，通过AI助手进行了部分缓解，但依旧不够直观<br></p>
+
+        </div>
+        <div class="bx">
+          <h4>如果重来</h4>
+          <p>对编辑器进行更深的改造，与AI的结合更前置</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case" id="practice">
+    <div class="wrap">
+      <div class="chead">
+        <p class="cid">CASE 03</p>
+        <h2>个人 AI 实践</h2>
+        <p class="cmeta"><b>2023 至今</b> · 独立完成 · <b>定义 / 交互 / 开发</b></p>
+      </div>
+
+      <div class="verdict">
+        <p class="vk">结论</p>
+        <p class="vt">把 AI 从「会用」推到「做成产品」：一个 <b>100w+ 用户</b>的工具、一个「需求 → 可编辑画布」的工作流、一个已上架插件市场的 DSH 插件。三个都不是 demo，都在被真实使用。</p>
+        <div class="vkpis">
+          <div><b>100w+</b><span>小程序累计用户</span></div>
+          <div><b>2</b><span>开源项目</span></div>
+          <div><b>1</b><span>已上架插件市场</span></div>
+          <div><b>1 轮</b><span>评审环节前置</span></div>
+        </div>
+      </div>
+
+      <div class="s"><span class="sn">01</span><h3>背景与问题</h3></div>
+      <details class="bg">
+        <summary>想让 AI 落在真实交付里，而不是停在聊天框里试用</summary>
+        <div class="inner">
+          <p>AI能从无到有出一个差不多的页面，细节需要介入去调整，除claude以外其他agent都不提供比较灵活的编辑器能力；在细节调整上通过对话反反复复，效率一般。没有版本管理，改坏了想回上一版也需要花token。</p>
+        </div>
+      </details>
+
+      <div class="s"><span class="sn">02</span><h3>我的判断</h3></div>
+      <div class="jgrid">
+        <div class="jcard">
+          <p class="jq">画布只做「需求 → 可编辑结构」这一段</p>
+          <p class="jw">不做通用设计工具。边界窄，才做得完；做得完，才有人用。</p>
+          <p class="jc"><b>代价：</b>复杂视觉稿仍要回 Figma，工具只在「结构讨论」这一段成立。</p>
+        </div>
+        <div class="jcard">
+          <p class="jq">插件先补场景，再谈交互</p>
+          <p class="jw">红黄绿灯不是我拍脑袋想的：并排跑五个会话时，我需要一眼知道哪个卡住了。先把场景说清楚，交互自然就出来了。</p>
+          <p class="jc"><b>代价：</b>只解决「感知」，不解决「调度」，任务还是得自己排。</p>
+        </div>
+        <div class="jcard">
+          <p class="jq">小程序一个人做完整个链路</p>
+          <p class="jw">需求、交互、开发、冷启动全部自己走一遍，是为了验证「一个想法最短多久能被真实用户使用」。</p>
+          <p class="jc"><b>代价：</b>没有团队协作和运营资源，增长基本靠自然流量。</p>
+        </div>
+      </div>
+
+      <div class="s"><span class="sn">03</span><h3>方案</h3></div>
+      <img class="shot" src="assets/32869281cb17da83e20659aef21df35e.png" alt="需求生成可编辑画布">
+      <div class="pblock">
+        <div class="ph"><h4>需求 → 可编辑画布</h4><span class="pl">github.com/erinwangstudio-art/yayidesign</span></div>
+        <p>定义需求输入与画布元素的映射关系，让生成的画布可以继续被修改，而不是一张截图。核心不是「生成得像」，是「生成完还能改」—— 不能改的产物在评审里没有价值。</p>
+      </div>
+      <div class="pblock">
+        <div class="ph"><h4>dsh-trafficlight</h4><span class="pl">已上架 DSH 插件市场</span></div>
+        <p>把重点关注会话的状态映射为红 / 黄 / 绿灯，提供 macOS 悬浮窗常驻提醒与可停靠侧栏，点击直达对应会话。改造自开源插件，补的是「并行任务管理」这个缺口。</p>
+      </div>
+      <div class="pblock">
+        <div class="ph"><h4>工具类小程序</h4><span class="pl">累计用户 100w+</span></div>
+        <p>一个人做完需求、交互、开发和冷启动，验证了「需求 → 上线 → 有人用」的完整链路。这一段经历的价值不在用户数，而在于我知道每一步真实的成本在哪。</p>
+      </div>
+
+      <div class="s"><span class="sn">04</span><h3>结果与口径</h3></div>
+      <div class="rgrid">
+        <div><b>100w+</b><span>小程序累计用户</span></div>
+        <div><b>已上架</b><span>DSH 插件市场</span></div>
+        <div><b>2</b><span>开源仓库</span></div>
+        <div><b>分钟级</b><span>从需求到可点原型</span></div>
+      </div>
+      <p class="notes">口径：用户数为小程序后台累计去重；「分钟级」是个人使用场景下的观察，非压测结论。</p>
+
+      <div class="s"><span class="sn">05</span><h3>边界与反思</h3></div>
+      <div class="boxtwo">
+        <div class="bx">
+          <h4>没做好的</h4>
+          <p>画布的可编辑性受生成结构限制，一旦层级生成得不对，改起来比重新画还慢。</p>
+          <p>插件只做到「看见状态」，没做到「安排任务」，离真正的并行调度还差一层。</p>
+        </div>
+        <div class="bx">
+          <h4>如果重来</h4>
+          <p>会先固定一套「结构骨架」再让模型填内容，而不是让它自由生成再纠偏 —— 可控性比惊艳更重要。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="dark">
+    <section class="about wrap">
+      <h2>看完案例，可以再看经历</h2>
+      <p>八年的路径、四次转身、以及每一段带走的判断。</p>
+      <p style="margin-top:20px"><a href="experience.html" style="color:#8C84FF;border-bottom:1px solid #8C84FF;padding-bottom:2px;font-size:13.5px">个人经历 →</a></p>
     </section>
-        </div>
-
-        <div data-deep-case="editor" style="display:none">
-    <section class="case">
-      <div class="chead"><h2>独立站编辑器案例拆解</h2><span class="cnote" style="font-weight:400">主题系统 · 案例拆解</span></div>
-      <div class="story">
-        <div class="story-row"><b>背景</b><span>全球独立站商家需要低成本搭建站点与多市场装修，主题开发依赖代码，复用与交付效率受限。</span></div>
-        <div class="story-row"><b>核心问题</b><span>页面组件不标准、布局扩展能力有限、多市场配置重复，主题供给与开发者生态需要规模化机制。</span></div>
-        <div class="story-row"><b>解决方式</b><span>把页面组件原子级拆解与标准化，扩展 Flexbox 布局模型；用「基础配置 + 单市场差异化配置」支持全球化运营，并搭建主题商城生态。</span></div>
-        <div class="story-row"><b>我的作用</b><span>围绕组件模型、装修交互与配置体系做产品方案设计；</span></div>
-        <div class="story-row"><b>推进过程</b><span>梳理页面组件 → 抽象基础组件库 → 设计配置层级与多市场规则 → 协同设计 / 前端 / KA 商家验证 → 建立主题商城接入流程</span></div>
+    <div class="wrap">
+      <div class="foot"><span>© 2026 Erin Wang</span>
+        <span><br></span>
       </div>
-      <div class="editor-grid">
-        <div class="ecard"><h4>主题架构升级</h4><p>页面组件原子级拆解与标准化，构建基础组件库与可复用组件体系；基于 Flexbox 扩展布局模型。</p></div>
-        <div class="ecard"><h4>多市场装修</h4><p>构建“基础配置 + 单市场差异化配置”体系，支持同一主题在不同国家/地区独立装修。</p></div>
-        <div class="ecard"><h4>生态商业化</h4><p>0→1 搭建主题商城生态，建立第三方开发者入驻与审核发布流程，提升主题供给与商业价值。</p></div>
-      </div>
-      
-      
-    </section>
-        </div>
-
-        <div data-deep-case="practice" style="display:none">
-    <section class="case">
-      <div class="chead"><h2>个人AI实践案例拆解</h2><span class="cnote" style="font-weight:400">个人项目 · 案例拆解</span></div>
-
-      <div class="project-block">
-        <div class="subhead"><h3>AI 画布编辑器</h3><span class="cnote">需求生成可编辑画布</span></div>
-        <div class="story">
-          <div class="story-row"><b>背景</b><span>基于开源编辑器项目，增加针对PM日常工作相关功能；</span></div>
-          <div class="story-row"><b>核心问题</b><span>便于快速修改，与Agent协同修改，涉及页面交互展开便于评审使用</span></div>
-          <div class="story-row"><b>解决方式</b><span>定义需求输入与画布元素映射，用 DSH 生成可继续修改的画布原型。</span></div>
-          <div class="story-row"><b>我的作用</b><span>独立完成需求定义、产品原型与交互设计</span></div>
-          <div class="story-row"><b>推进过程</b><span>已有开源项目体验：open design, huashu skill, 定义需求输入 → 设计画布元素映射 → 验证可编辑性 → 开源案例</span></div>
-        </div>
-        <div class="editor-grid" style="grid-template-columns:1fr">
-          <div class="ecard"><h4>案例结果</h4><p>用 DSH 把产品需求直接生成为可视化“画布”原型，缩短方案验证周期。案例开源：github.com/erinwangstudio-art/yayidesign。</p></div>
-        </div>
-      </div>
-
-      <div class="project-block">
-        <div class="subhead"><h3>dsh-trafficlight 插件</h3><span class="cnote">会话状态可视化</span></div>
-        <div class="story">
-          <div class="story-row"><b>背景</b><span>使用 DSH 推进多会话任务时，需要关注重点任务进行，随时感知会话执行状态。</span></div>
-          <div class="story-row"><b>核心问题</b><span>打开面板对话分散逐个确认，并行任务管理效率低。</span></div>
-          <div class="story-row"><b>解决方式</b><span>把重点关注会话状态映射为红 / 黄 / 绿灯，并提供 macOS 悬浮窗常驻提醒，支持点击快速进入对应对话窗口。</span></div>
-          <div class="story-row"><b>我的作用</b><span>基于开源插件迭代功能、交互规则与实践；</span></div>
-          <div class="story-row"><b>推进过程</b><span>找现有插件→ 补充缺少场景 → 设计交互规则 → 开发插件 → 上架插件市场</span></div>
-        </div>
-        <div class="editor-grid" style="grid-template-columns:1fr">
-          <div class="ecard"><h4>案例结果</h4><p>按会话状态提示、macOS 悬浮窗与可停靠侧栏；已上架 DSH 插件市场。GitHub：github.com/erinwangstudio-art/dsh-trafficlight。</p></div>
-        </div>
-        
-      </div>
-    </section>
-        </div>
-
-    
+    </div>
   </div>
 </div>
-<script>
-const CASE_NODES = [
-      { id:'logo', name:'logo 检测', cost:'¥0.0095', cap:'100%', type:'ok', human:'否', role:'检测定位 · 主指标看召回', io:'入：640×640 图　出：框 ×N + 类别 + 置信度', stop:'无框或最高置信度 < 0.45 时拒答', th:'置信度 0.45；漏检代价高，阈值偏松', fb:'超时 → 规则兜底（长宽比 + 位置先验）→ 人工队列', fail:'小尺寸 logo、半透明水印 logo 漏检' },
-      { id:'qual', name:'图片质量检测', cost:'¥0.0037', cap:'94%', type:'ok', human:'否', role:'二分类 · 便宜的前置闸门', io:'入：原图　出：pass / fail + 原因码', stop:'分辨率或模糊度临界时给出 fail 原因，不下结论', th:'短边 ≥ 800px、模糊度阈值固定', fb:'判定失败直接退回首图环节', fail:'逆光、纯色底误判为过曝' },
-      { id:'color', name:'底衫颜色检测', cost:'¥0.0040', cap:'92%', type:'ok', human:'否', role:'分类 · 客观可自动', io:'入：底衫图　出：色系 + 色号 + 置信度', stop:'置信度 < 0.6 转人工', th:'0.60；错色影响推荐，阈值偏高', fb:'失败 → 取上游 SKU 属性兜底', fail:'同色系不同光照（米白 / 象牙白）' },
-      { id:'fit', name:'底衫版型检测', cost:'¥0.0260', cap:'87%', type:'human', human:'是', role:'多维度分层识别 · 本链路最贵', io:'入：底衫图　出：性别 / 领型 / 袖型 / 面料 四维独立置信度', stop:'任一维度低于该维阈值 → 不整条拒答，带 top3 候选转人工', th:'性别 0.75｜领型 0.70｜袖型 0.70｜面料 0.55', fb:'超时 → 规则兜底 → 人工队列（附 top3 候选）', fail:'面料在弱光、低分辨率下不可判；68% 错误集中于此' },
-      { id:'dedup', name:'商品图片去重', cost:'¥0.0013', cap:'36%', type:'ok', human:'20%', role:'检索匹配 · 阈值决策', io:'入：图 + 元数据　出：同款簇 ID + 相似度', stop:'相似度 0.83–0.90 灰区给出候选对，不自动合并', th:'0.87；低于 0.85 会误合并同色系不同款', fb:'向量库不可用 → 退化为元数据强规则去重', fail:'同款不同角度、加字改色后漏合并' },
-      { id:'right', name:'侵权检测', cost:'¥0.0080', cap:'73%', type:'human', human:'50%', role:'风险判别 · 代价不对称', io:'入：图案 + 类目　出：风险等级 + 命中理由', stop:'中风险不自动放行，进人工仲裁队列', th:'漏检代价 ≫ 误杀，阈值按类目分档', fb:'服务异常 → 一律拦截转人工', fail:'二次创作、局部改色、字体类商标' },
-      { id:'info', name:'商品信息准备', cost:'¥0.0240', cap:'45%', type:'ok', human:'否', role:'生成 · 用可用率不用准确率', io:'入：属性 + 图案 + 类目规则　出：标题 / 五点 / 描述', stop:'触发禁用词 → 不输出，回退模板', th:'硬规则 pass/fail，不做置信度', fb:'生成失败 → 模板占位 + 人工补全', fail:'长尾类目术语不准、多语言生硬' }
-    ];
-const CAP_ROWS = [
-      { n:'logo 检测', o:'框 + 类别 + 置信度', t:'45,691', c:'100%', a:'—', h:'0%', cost:'¥0.0095', w:'1.5%', hot:'' },
-      { n:'图片质量检测', o:'pass / fail + 原因码', t:'43,021', c:'100%', a:'96%', h:'0%', cost:'¥0.0037', w:'0.6%', hot:'' },
-      { n:'底衫颜色检测', o:'色系 + 色号', t:'39,667', c:'96%', a:'94%', h:'0%', cost:'¥0.0040', w:'0.6%', hot:'' },
-      { n:'底衫版型检测', o:'四维标签 + 置信度', t:'34,602', c:'50%', a:'92%', h:'100%', cost:'¥0.0260', w:'8%', hot:'hot' },
-      { n:'商品图片去重', o:'同款簇 ID + 相似度', t:'12,531', c:'100%', a:'97%', h:'20%', cost:'¥0.0013', w:'0.3%', hot:'' },
-      { n:'侵权检测', o:'风险等级 + 命中理由', t:'9,131', c:'73%', a:'89%', h:'50%', cost:'¥0.0080', w:'2.3%', hot:'' },
-      { n:'商品信息准备', o:'标题 / 五点 / 描述', t:'4,078', c:'100%', a:'—', h:'0%', cost:'¥0.0240', w:'3.7%', hot:'' },
-      { n:'logo 提取', o:'透明底图案', t:'4,121', c:'31%', a:'—', h:'0%', cost:'¥0.2017', w:'100%', hot:'hot' },
-      { n:'抠图', o:'透明底图 + 蒙版', t:'3,451', c:'84%', a:'—', h:'0%', cost:'¥0.0800', w:'14.6%', hot:'' },
-      { n:'底衫/颜色匹配', o:'匹配结果 ×N（扇出）', t:'13,911', c:'—', a:'—', h:'0%', cost:'¥0.1009', w:'3.8%', hot:'' }
-    ];
-const CFG = {}; CASE_NODES.forEach(n => { CFG[n.id] = n; });
-let selectedNode = 'fit';
 
-function selectCase(id, updateHash = false) {
-  document.querySelectorAll('[data-case-panel]').forEach(el => { el.style.display = el.dataset.casePanel === id ? '' : 'none'; });
-  document.querySelectorAll('[data-deep-case]').forEach(el => { el.style.display = el.dataset.deepCase === id ? '' : 'none'; });
-  document.querySelectorAll('[data-p]').forEach(el => { el.classList.toggle('on', el.dataset.p === id); });
-  if (updateHash && history.replaceState) history.replaceState(null, '', '#' + id);
-}
-document.querySelectorAll('[data-p]').forEach(el => el.addEventListener('click', () => selectCase(el.dataset.p, true)));
-function caseFromHash() {
-  const raw = (location.hash || '').replace('#', '');
-  const id = raw.split('?')[0].split('&')[0];
-  return ['workflow','editor','practice'].includes(id) ? id : 'workflow';
-}
-window.addEventListener('hashchange', () => selectCase(caseFromHash()));
-
-document.querySelectorAll('[data-ct]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const id = btn.dataset.ct;
-    document.querySelectorAll('[data-ct]').forEach(x => x.classList.toggle('on', x.dataset.ct === id));
-    document.querySelectorAll('[data-ct-panel]').forEach(p => { p.style.display = p.dataset.ctPanel === id ? '' : 'none'; });
-  });
-});
-
-function renderNode(id) {
-  selectedNode = id;
-  const grid = document.querySelector('[data-node-grid]');
-  if (grid) grid.innerHTML = CASE_NODES.map(n => `<div class="cnode ${n.id === id ? 'on' : ''}" data-node="${n.id}"><div class="nt">${n.name}</div><div class="nm"><span class="cdot ${n.type}"></span>覆盖 ${n.cap} · 人工 ${n.human}</div><div class="cost">${n.cost}</div></div>`).join('');
-  const node = CASE_NODES.find(n => n.id === id) || CASE_NODES.find(n => n.id === 'fit');
-  const box = document.querySelector('[data-cfg]');
-  if (box) box.innerHTML = `<div class="title">${node.name || "节点配置"}</div><div class="role">${node.role}</div><div class="ckv"><div class="k">输入 / 输出契约</div><div class="v">${node.io}</div></div><div class="ckv"><div class="k">拒答边界</div><div class="v">${node.stop}</div></div><div class="ckv"><div class="k">阈值</div><div class="v">${node.th}</div></div><div class="ckv"><div class="k">失败降级路径</div><div class="v">${node.fb}</div></div><div class="cdiv"></div><div class="ckv"><div class="k">已知失效模式</div><div class="v" style="color:#b4690e">${node.fail}</div></div>`;
-}
-const nodeGrid = document.querySelector('[data-node-grid]');
-if (nodeGrid) nodeGrid.addEventListener('click', e => {
-  const el = e.target.closest('[data-node]');
-  if (el) renderNode(el.dataset.node);
-});
-
-const capBody = document.querySelector('[data-cap-rows]');
-if (capBody) capBody.innerHTML = CAP_ROWS.map(r => `<tr><td>${r.n}</td><td class="muted">${r.o}</td><td class="num">${r.t}</td><td class="num">${r.c}</td><td class="num">${r.a}</td><td class="num">${r.h}</td><td class="num">${r.cost}</td><td><div class="cbar"><i class="${r.hot}" style="width:${r.w}"></i></div></td></tr>`).join('');
-
-selectCase(caseFromHash());
-renderNode('fit');
-</script>
 </body>
 </html>
