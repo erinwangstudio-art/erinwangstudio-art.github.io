@@ -30,7 +30,7 @@ a{color:inherit;text-decoration:none}
 .links a:hover{color:var(--d1)}
 .links a.on{color:var(--d1);font-weight:600;border-bottom:2px solid var(--at);padding-bottom:4px}
 .navcta{font-size:12.5px;font-weight:500;color:var(--ink);background:var(--d1);padding:9px 16px;border-radius:999px}
-.hhero{padding:64px 0 56px}
+.hhero{padding-block:64px 56px}
 .kick{margin:0 0 20px;font-size:12px;letter-spacing:1.6px;color:var(--at);font-weight:500}
 .hhero h1{margin:0;font-size:48px;line-height:1.2;letter-spacing:-1.2px;font-weight:500;color:#FFF}
 .hhero .lead{margin:22px 0 0;font-size:15px;line-height:1.95;color:var(--d2);max-width:700px}
@@ -120,7 +120,7 @@ td.muted{color:var(--t3)}
 .pblock .pl{font-size:11.5px;color:var(--t3);font-family:var(--mono)}
 .pblock p{margin:0 0 10px;font-size:12.5px;line-height:1.95;color:var(--t2)}
 .pblock p:last-child{margin:0}
-.about{padding:64px 0 48px}
+.about{padding-block:64px 48px}
 .about h2{font-size:28px;line-height:1.4;letter-spacing:-.5px;margin:0 0 14px;font-weight:500;color:#fff}
 .about p{font-size:13.5px;line-height:1.9;color:var(--d2);margin:0;max-width:560px}
 .foot{border-top:1px solid var(--lined);padding:20px 0 36px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--d3)}
@@ -137,12 +137,24 @@ td.muted{color:var(--t3)}
   .wrap{padding:0 20px}
   .navin{height:auto;padding:14px 0;flex-wrap:wrap;gap:12px}
   .links{gap:18px;font-size:12.5px;order:3;width:100%}
-  .hhero h1{font-size:28px}
+  .navcta{font-size:12px;padding:0 14px}
+  .hhero{padding-block:44px 36px}
+  .hhero h1{font-size:28px;line-height:1.25;letter-spacing:-.4px}
+  .hhero .lead{font-size:13.5px}
+  .case{padding:44px 0 36px}
   .chead h2{font-size:24px}
+  .verdict{padding:22px}
+  .vt{font-size:16px;line-height:1.7}
+  .s{margin:28px 0 12px}
+  .bg .inner{font-size:12.5px}
+  .flow{padding:14px}
+  .ec{padding:16px}
+  .pblock{padding:18px}
+  .about{padding-block:48px 40px}
   .nodes{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cfg,.vkpis,.rgrid{grid-template-columns:1fr}
   .subin nav{gap:14px;font-size:11.5px}
-  .vt{font-size:16px}
+  .table{display:block;overflow:auto}
 }
 
 </style>
@@ -165,7 +177,7 @@ td.muted{color:var(--t3)}
     </header>
     <section class="hhero wrap">
       <p class="kick">SELECTED WORK · 3 CASES · 2022–2026</p>
-      <h1></h1><h1 style="font-size: 44px; letter-spacing: -0.8px; margin: 0px 0px 16px; font-weight: 700">持续学习·沉淀AI native的工作方式和平台能力</h1>
+      <h1 style="margin: 0px 0px 16px; font-weight: 700">持续学习·沉淀AI native的工作方式和平台能力</h1>
       <p class="lead"><span style="color: rgb(117, 117, 111); font-family: ui-monospace, &quot;SF Mono&quot;, SFMono-Regular, Menlo, monospace; font-size: 12.5px">点击切换查看项目详情</span></p>
       <div class="jumps">
         <a class="jump" href="#workflow">
@@ -221,7 +233,7 @@ td.muted{color:var(--t3)}
       <details class="bg">
         <summary>商品生产链路原本靠运营个人经验串起来：看竞品 → 采素材 → 加工 → 规避风险 → 录商品数据上架</summary>
         <div class="inner">
-          <p style="width: 1047px">链路涉及采集、清洗、图像处理、风险识别、上架五个环节，每个环节都有自己的工具，但没有一处沉淀成可复用的能力。结果是：经验的边际复制成本极高，新人上手要跟三个月。</p>
+          <p>链路涉及采集、清洗、图像处理、风险识别、上架五个环节，每个环节都有自己的工具，但没有一处沉淀成可复用的能力。结果是：经验的边际复制成本极高，新人上手要跟三个月。</p>
           <p>真正的瓶颈不是「某个模型不够准」，而是「整条链路无法度量」—— 没人说得清哪个环节吃掉了最多的钱、哪个环节错得最贵。</p>
         </div>
       </details>
